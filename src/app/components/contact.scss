@@ -1,0 +1,74 @@
+@import "../globals.scss";
+.contact-container {
+  padding: $paddingBodyCenter;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 2em;
+  background-color: $colorBlanco;
+
+  .contact-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  .contact-box1 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 250px;
+  }
+  .contact-box2 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    min-width: 250px;
+  }
+  .contact-form {
+    background-color: $colorBlanco;
+    min-width: 250px;
+  }
+  .contact-h2 {
+    margin: 0;
+
+    h2 {
+      text-align: end;
+      font-size: $fuenteContact;
+      margin: 0;
+    }
+  }
+  .contact-p {
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      text-align: end;
+    }
+  }
+  .contact-box3 {
+    flex: 1;
+    max-height: 150px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20%;
+    gap: 3em;
+    > img {
+      max-height: 100px;
+      max-width: 100px;
+      object-fit: contain;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-box1 {
+    order: 2; // Cambia el orden para pantallas pequeñas
+  }
+}

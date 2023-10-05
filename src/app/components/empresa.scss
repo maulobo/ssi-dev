@@ -1,0 +1,50 @@
+@import "../globals.scss";
+
+.contenedor {
+  position: relative;
+  background-color: $colorNegro;
+  color: $colorBlanco;
+  @include divEspacio(center);
+  min-height: 100vh;
+  padding: $paddingBodyCenter;
+  > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .first {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      margin-left: auto;
+      max-width: 70%;
+      h2 {
+        font-size: $fuenteSubtitulos;
+        line-height: 1;
+      }
+      p {
+        font-size: $fuenteTexto;
+      }
+    }
+    .firstNuestros {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      margin-left: auto;
+      max-width: 500px;
+      line-height: 1;
+      h2 {
+        font-size: $fuenteSubtitulos;
+      }
+    }
+  }
+  .second {
+    display: flex;
+    flex-wrap: wrap;
+    > section {
+      flex: 1;
+      gap: 10px;
+      min-width: 250px;
+    }
+  }
+}
