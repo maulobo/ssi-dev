@@ -30,22 +30,14 @@ export function Loader() {
 const Page = () => {
   const [loading, setLoading] = useState(true);
 
-  window.onload = () => {
-    setLoading(false);
-  };
-
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <main className="trailers-container">
-          <HeroTrailers />
-          <Appears phrase={phrase1} title="Rapida construccion" />
-          <Appears phrase={phrase2} />
-          <TrailerBlack />
-        </main>
-      )}
+      <main className="trailers-container">
+        <HeroTrailers />
+        <Appears phrase={phrase1} title="Rapida construccion" />
+        <Appears phrase={phrase2} />
+        <TrailerBlack />
+      </main>
     </>
   );
 };
