@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { Suspense, useEffect, useLayoutEffect, useState } from "react";
 import Empresa from "./components/home-empresa";
 import Lateral2 from "./components/home-Lateral2";
 import Clientescontacto from "./components/home-clientesContacto-wrap";
