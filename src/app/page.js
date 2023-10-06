@@ -9,7 +9,7 @@ import gsap from "gsap";
 import HomeHero from "./components/home-hero";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [timeline, setTimeline] = useState(null);
 
   useLayoutEffect(() => {
