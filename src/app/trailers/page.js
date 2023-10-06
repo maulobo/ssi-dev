@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Appears from "../components/lettersAppears";
+import Appears from "../components/trailers-lettersAppears";
 import "./page.scss";
-import HeroTrailers from "../components/hero-trailers";
-import TrailerBlack from "../components/trailerBlack";
+import HeroTrailers from "../components/trailers-hero";
+import TrailerBlack from "../components/trailers-black";
 import { CircularProgress } from "@nextui-org/react";
 
 const phrase1 =

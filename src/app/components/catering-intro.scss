@@ -1,0 +1,19 @@
+@import "../globals.scss";
+.intro-container {
+  min-height: 100vh;
+  display: flex;
+  padding: $paddingBodyCenter;
+}
+.intro-frutas {
+  flex: 1;
+}
+
+.intro-p {
+  flex: 1;
+  color: $colorBlanco;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-box {
+}

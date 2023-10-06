@@ -1,0 +1,51 @@
+@import "../globals.scss";
+
+.contenedor-catering {
+  position: relative;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $colorNegro;
+  h2 {
+    top: 10%;
+    position: absolute;
+    z-index: 1; /* Coloca el título por encima del fondo */
+    font-size: $fuenteSubtitulos;
+    text-align: center;
+    color: $colorBlanco;
+    max-width: 70%;
+  }
+  > div {
+    min-width: 300px;
+  }
+}
+
+.mitad-der {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+/* Estilo para el lado izq */
+
+.mitad-izq {
+  flex: 1;
+  color: white;
+  display: flex;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.section-p {
+  display: flex;
+  align-items: center;
+  padding: $paddingBodyCenter;
+}
