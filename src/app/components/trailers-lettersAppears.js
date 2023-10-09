@@ -10,10 +10,9 @@ const Appears = ({ title = "", phrase }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container.current,
-        start: "center center",
+        start: "top center",
         end: `+=${window.innerHeight / 1.7}`,
         scrub: 1,
-        markers: true,
       },
     });
     tl.to(refs.current, {

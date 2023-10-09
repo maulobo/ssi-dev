@@ -35,7 +35,6 @@ const CateringSvg = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: svgContainerRef.current,
-        markers: true,
         start: "center bottom-=200",
       },
     });
@@ -49,7 +48,7 @@ const CateringSvg = () => {
   }, []);
 
   return (
-    <div ref={svgContainerRef} className="svg-container">
+    <div ref={svgContainerRef} className="cateringsvg-container">
       <div className="svg-boxes">
         {svgs.map((svg, i) => (
           <div

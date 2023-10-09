@@ -1,25 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./home-hero.scss";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 const HomeHero = () => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-
-  useEffect(() => {
-    const videoElement = document.querySelector(".video");
-
-    if (videoElement) {
-      setVideoLoaded(true);
-      console.log("se cargo rey");
-    }
-  }, []);
-
+  let { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 1], ["0", "-4000px"]);
   return (
     <>
-      <div style={{ height: videoLoaded ? "" : "100vh" }}></div>
       <div className="video-hero-container">
-        <video autoPlay muted className="video">
-          <source src="/video/Home.mp4" type="video/mp4" />
-        </video>
+        <div className="contenido">
+          <video
+            src="/video/Home.mp4"
+            autoPlay
+            muted
+            className="background-video"
+            poster="/public/images/catering.jpg"
+          />
+        </div>
       </div>
     </>
   );

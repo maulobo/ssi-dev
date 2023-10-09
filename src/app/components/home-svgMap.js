@@ -16,7 +16,6 @@ const SvgMap = () => {
         start: "top=100 center",
         end: "bottom center",
         scrub: 1,
-        markers: true,
       },
     });
     tl.to(lineaRef.current, {

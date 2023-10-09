@@ -23,6 +23,8 @@ $fuenteStroke: clamp(
 ); // para las fuentes extra grandes solo SSI o numero
 $fuenteContact: clamp(4em, 8em, 14vw);
 
+$fontTamnio: clamp(1em, 3vw, 1.4em);
+
 //TIPOS DE FUENTES-----> dos tipos
 @import url("https://fonts.cdnfonts.com/css/avenir");
 $fuenteMenuTipo: "Avenir", sans-serif;
@@ -74,9 +76,15 @@ $margenBajoTitulo: 7.5rem; // ver en pantalla depende del largo y ancho para el 
   text-align: center;
 }
 
+@mixin divGenerico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 h2 {

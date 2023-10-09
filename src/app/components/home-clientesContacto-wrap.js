@@ -19,7 +19,6 @@ const Clientescontacto = () => {
         trigger: mainRef.current,
         scrub: 1.5,
         pin: true,
-        markers: true,
       },
     });
 
@@ -28,7 +27,7 @@ const Clientescontacto = () => {
       {
         y: -contactHeight,
       },
-      "<1"
+      "<"
     );
   }, []);
 
