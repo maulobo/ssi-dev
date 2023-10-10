@@ -2,11 +2,15 @@
 
 .contenedor {
   position: relative;
-  background-color: $colorNegro;
-  color: $colorBlanco;
-  @include divEspacio(center);
-  min-height: 100vh;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
   padding: $paddingBodyCenter;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: $colorBlanco;
+  background-color: $colorNegro;
   > div {
     flex: 1;
     display: flex;

@@ -1,6 +1,6 @@
 @import "../globals.scss";
 
-.contenedor-catering {
+.home-contenedor-catering {
   position: relative;
   flex-wrap: wrap;
   width: 100vw;
@@ -10,7 +10,7 @@
   flex-direction: row;
   justify-content: center;
   background-color: $colorNegro;
-  h2 {
+  .h2 {
     top: 10%;
     position: absolute;
     z-index: 1; /* Coloca el título por encima del fondo */
@@ -125,5 +125,23 @@
     margin: 0;
     position: absolute;
     width: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .home-contenedor-catering {
+    .h2 {
+      padding: $paddingBodyCenter;
+      top: 30%;
+    }
+  }
+
+  .mitad-izq {
+    padding: $paddingBodyCenter;
+    position: absolute;
+    top: 50%;
+  }
+
+  .img {
+    opacity: 0.5;
   }
 }

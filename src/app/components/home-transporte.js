@@ -11,12 +11,12 @@ import svg5 from "/public/images/svg/5.svg";
 import svg6 from "/public/images/svg/6.svg";
 import svg7 from "/public/images/svg/7.svg";
 
-const HomeCatering = () => {
+const HomeTransporte = () => {
   return (
     <>
       <div className="home-contenedor-catering">
         <div className="h2">
-          <h2>SERVICIO DE CATERING</h2>
+          <h2>TRANSPORTE & ALQUILER</h2>
         </div>
         <div className="mitad-izq">
           <section className="div-izq">
@@ -26,15 +26,6 @@ const HomeCatering = () => {
                 ac quam a urna tincidunt faucibus. Sed venenatis magna vel risus
                 cursus tincidunt.
               </p>
-            </section>
-            <section className="section-svg">
-              <Image src={svg1} alt="unafrutita" className="uno" />
-              <Image src={svg2} alt="picante" className="dos" />
-              <Image src={svg3} alt="palta" className="tres" />
-              <Image src={svg4} alt="nose" className="cuatro" />
-              <Image src={svg5} alt="futi" className="cinco" />
-              <Image src={svg6} alt="laranja" className="seis" />
-              <Image src={svg7} alt="pizza" className="siete" />
             </section>
           </section>
         </div>
@@ -46,4 +37,4 @@ const HomeCatering = () => {
   );
 };
 
-export default HomeCatering;
+export default HomeTransporte;

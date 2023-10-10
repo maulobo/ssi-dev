@@ -2,7 +2,7 @@ import React from "react";
 
 import "./home-empresa.scss";
 
-const Servicios = () => {
+const HomeServicios = () => {
   return (
     <div className="contenedor">
       <div>
@@ -20,4 +20,4 @@ const Servicios = () => {
   );
 };
 
-export default Servicios;
+export default HomeServicios;

@@ -13,7 +13,10 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  h3 {
-    color: white;
+}
+@media screen and (max-width: 750px) {
+  .scroll-section {
+    display: flex;
+    flex-direction: column;
   }
 }

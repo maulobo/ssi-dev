@@ -2,9 +2,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { use, useEffect, useRef } from "react";
 import "./home-lateral.scss";
-import Servicios from "./home-servicios";
 import Division from "./home-division";
-import Catering from "./home-catering";
+import HomeCatering from "./home-catering";
+import HomeTransporte from "./home-transporte";
+import HomeServicios from "./home-servicios";
 
 const Lateral = () => {
   const sectionRef = useRef(null);
@@ -40,19 +41,21 @@ const Lateral = () => {
     <section className="scroll-section-outer">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
-          <section className="scroll-section justify-end">
-            <Servicios />
+          <section className="scroll-section">
             <Division />
+            <HomeServicios />
           </section>
           <section className="scroll-section">
-            <Catering />
             <Division />
+            <HomeCatering />
           </section>
           <section className="scroll-section">
-            <h3>section3</h3>
+            <Division />
+            <HomeTransporte />
           </section>
           <section className="scroll-section">
-            <h3>section4</h3>
+            <Division />
+            <HomeTransporte />
           </section>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Clientescontacto = () => {
   const contactRef = useRef(null);
 
   useEffect(() => {
-    const contactHeight = clientesRef.current.getBoundingClientRect().height;
+    const contactHeight = clientesRef.current.clientHeight;
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: mainRef.current,
@@ -21,7 +21,7 @@ const Clientescontacto = () => {
         pin: true,
       },
     });
-
+    console.log(contactHeight);
     tl.to(
       contactRef.current,
       {
@@ -29,10 +29,6 @@ const Clientescontacto = () => {
       },
       "<"
     );
-  }, []);
-
-  useEffect(() => {
-    // Función para obtener la altura del elemento hijo
   }, []);
 
   return (
