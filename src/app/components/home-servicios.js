@@ -4,7 +4,7 @@ import "./home-empresa.scss";
 
 const HomeServicios = () => {
   return (
-    <div className="contenedor">
+    <div className="contenedor2">
       <div>
         <aside className="firstNuestros">
           <h2>NUESTROS SERVICIOS</h2>

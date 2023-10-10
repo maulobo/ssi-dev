@@ -36,7 +36,7 @@ const Clientescontacto = () => {
       <div ref={clientesRef}>
         <Clientes />
       </div>
-      <div style={{ minHeight: "100vh" }} ref={contactRef}>
+      <div style={{ height: "100vh" }} ref={contactRef}>
         <Contact />
       </div>
     </div>
