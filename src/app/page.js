@@ -30,13 +30,13 @@ export default function Home() {
       {loading ? (
         <Loader timeline={timeline} />
       ) : (
-        <>
+        <div style={{ overflow: "hidden" }}>
           <HomeHero />
           <Letters />
           <Empresa />
           <Lateral />
           <Clientescontacto />
-        </>
+        </div>
       )}
     </main>
   );
