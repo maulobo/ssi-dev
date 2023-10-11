@@ -13,15 +13,16 @@ const Clientescontacto = () => {
   const contactRef = useRef(null);
 
   useEffect(() => {
-    const contactHeight = clientesRef.current.clientHeight;
+    const contactHeight = mainRef.current.clientHeight;
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: mainRef.current,
-        scrub: 1.5,
+        scrub: 1,
         pin: true,
       },
     });
-    console.log(contactHeight);
+    console.log(mainRef.current.clientHeight);
+    console.log(contactRef.current.clientHeight);
     tl.to(
       contactRef.current,
       {
@@ -32,13 +33,9 @@ const Clientescontacto = () => {
   }, []);
 
   return (
-    <div ref={mainRef} className="wrapper_content">
-      <div ref={clientesRef}>
-        <Clientes />
-      </div>
-      <div style={{ height: "100vh" }} ref={contactRef}>
-        <Contact />
-      </div>
+    <div ref={mainRef} className="wrapper-content-cc">
+      <Clientes ref={clientesRef} />
+      <Contact ref={contactRef} />
     </div>
   );
 };

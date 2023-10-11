@@ -1,7 +1,6 @@
 @import "../globals.scss";
-.main {
-  min-height: 100vh;
-
+.letters-main {
+  min-height: 40vh;
   @include divEspacio(center);
   padding: $paddingBodyCenter;
   justify-content: center;

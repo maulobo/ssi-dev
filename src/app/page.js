@@ -8,6 +8,7 @@ import Loader from "./components/Loader/Loader";
 import gsap from "gsap";
 import HomeHero from "./components/home-hero";
 import Lateral from "./components/home-lateral";
+import Division from "./components/home-division";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);

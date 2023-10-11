@@ -2,14 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import "./home-catering.scss";
-import img from "/public/images/catering.jpg";
-import svg1 from "/public/images/svg/1.svg";
-import svg2 from "/public/images/svg/2.svg";
-import svg3 from "/public/images/svg/3.svg";
-import svg4 from "/public/images/svg/4.svg";
-import svg5 from "/public/images/svg/5.svg";
-import svg6 from "/public/images/svg/6.svg";
-import svg7 from "/public/images/svg/7.svg";
+import img from "/public/images/transporte.jpeg";
 
 const HomeTransporte = () => {
   return (

@@ -83,7 +83,7 @@ const Clientes = () => {
   }, []);
 
   return (
-    <div ref={clientesRef} className="clientes-container">
+    <div ref={clientesRef} className="clientes-container wrapper-content-cc">
       <div className="box box-1-container ">
         <section>
           <h2>{contador}</h2>

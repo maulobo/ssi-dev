@@ -1,22 +1,62 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./home-empresa.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { NextUIProvider } from "@nextui-org/react";
 import AccordionMio from "./home-accordion";
 import SvgMap from "./home-svgMap";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
 const Empresa = () => {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  let y = useTransform(scrollYProgress, [0, 1], ["200px", "-800px"]);
+
+  const contenedorRef = useRef(null);
+  const titleRef = useRef(null);
+  const pRef = useRef(null);
+  const mapRef = useRef(null);
+  const accRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: contenedorRef.current,
+        start: "center bottom",
+      },
+    });
+    tl.from(titleRef.current, {
+      opacity: 0,
+      x: 300,
+    })
+      .from(pRef.current, {
+        opacity: 0,
+        x: 300,
+      })
+      .from(mapRef.current, {
+        opacity: 0,
+      })
+      .from(accRef.current, {
+        opacity: 0,
+      });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
 
   return (
-    <div className="contenedor">
-      <SvgMap />
+    <div ref={contenedorRef} className="contenedor">
+      <div ref={mapRef}>
+        <SvgMap />
+      </div>
       <div>
         <div className="first">
-          <motion.h2 style={{ y }}>NUESTRA</motion.h2>
-          <motion.h2 style={{ y }}>EMPRESA</motion.h2>
-          <p>
+          <div ref={titleRef}>
+            <h2>NUESTRA</h2>
+            <h2>EMPRESA</h2>
+          </div>
+          <p ref={pRef}>
             Somos una compañía de servicios generales con perso- nal capacitado
             siempre a la altura de las circunstan- cias que se presentan.
             Nuestra visión es ampliar la capacidad y experiencia para garantizar
@@ -30,7 +70,7 @@ const Empresa = () => {
       </div>
       <div>
         <div className="second">
-          <section className="second-section1">
+          <section ref={accRef} className="second-section1">
             <NextUIProvider>
               <AccordionMio />
             </NextUIProvider>
