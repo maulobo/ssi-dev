@@ -11,7 +11,7 @@ const Appears = ({ title = "", phrase }) => {
       scrollTrigger: {
         trigger: container.current,
         start: "top center",
-        end: `+=${window.innerHeight / 1.7}`,
+        end: `center center`,
         scrub: 1,
       },
     });

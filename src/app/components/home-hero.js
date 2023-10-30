@@ -1,6 +1,6 @@
 import React from "react";
 import "./home-hero.scss";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 
 const HomeHero = () => {
   let { scrollYProgress } = useScroll();

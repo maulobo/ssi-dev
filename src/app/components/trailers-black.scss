@@ -4,8 +4,25 @@
 }
 .acordion {
   width: 40%;
-  z-index: 11;
+  z-index: 1;
   top: 30%;
   left: 30%;
   position: absolute;
+}
+@media (max-width: 768px) {
+  .imageClass {
+    background-color: black;
+  }
+  .acordion {
+    position: relative;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    > div {
+      font-size: small;
+      span {
+        font-size: small;
+      }
+    }
+  }
 }

@@ -5,7 +5,119 @@ import "./home-clientes.scss";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import flecha from "/public/images/flecha.png";
-import repsol from "/public/images/repsol.png";
+import aesa from "/public/images/logos/aesa.png";
+import ge from "/public/images/logos/ge.png";
+import schlumberger from "/public/images/logos/schlumberger.png";
+import ypf from "/public/images/logos/ypf.png";
+import milicic from "/public/images/logos/milicic.png";
+import transener from "/public/images/logos/Transener.png";
+import techint from "/public/images/logos/techint.png";
+import tecpetrol from "/public/images/logos/tecpetrol.png";
+import siderca from "/public/images/logos/siderca.png";
+import cameron from "/public/images/logos/cameron.png";
+import contreras from "/public/images/logos/contreras.png";
+import pan from "/public/images/logos/pan.png";
+import epas from "/public/images/logos/epas.jpeg";
+import pampa from "/public/images/logos/pampa.jpeg";
+import pecom from "/public/images/logos/pecom.jpg";
+import weather from "/public/images/logos/Weatherford.jpg";
+import bolland from "/public/images/logos/bolland.jpeg";
+import delacon from "/public/images/logos/delacon.jpg";
+import uga from "/public/images/logos/uga.jpeg";
+import lomalata from "/public/images/logos/lomalata.jpeg";
+import gobierno from "/public/images/logos/gobierno.png";
+import superior from "/public/images/logos/superior.png";
+
+const logos = [
+  {
+    image: aesa,
+    alt: "aesa",
+  },
+  {
+    image: ge,
+    alt: "general-electric",
+  },
+  {
+    image: schlumberger,
+    alt: "schlumberger",
+  },
+  {
+    image: ypf,
+    alt: "ypf",
+  },
+  {
+    image: techint,
+    alt: "techint",
+  },
+  {
+    image: tecpetrol,
+    alt: "tecpetrol",
+  },
+  {
+    image: pecom,
+    alt: "pecom",
+  },
+  {
+    image: epas,
+    alt: "epas",
+  },
+  {
+    image: pampa,
+    alt: "pampa",
+  },
+  {
+    image: siderca,
+    alt: "siderca",
+  },
+  {
+    image: weather,
+    alt: "weather",
+  },
+  {
+    image: transener,
+    alt: "transener",
+  },
+  {
+    image: milicic,
+    alt: "milicic",
+  },
+  {
+    image: cameron,
+    alt: "cameron",
+  },
+  {
+    image: contreras,
+    alt: "contreras",
+  },
+  {
+    image: pan,
+    alt: "pan",
+  },
+  {
+    image: delacon,
+    alt: "delacon",
+  },
+  {
+    image: bolland,
+    alt: "bolland",
+  },
+  {
+    image: lomalata,
+    alt: "lomalata",
+  },
+  {
+    image: uga,
+    alt: "uga",
+  },
+  {
+    image: gobierno,
+    alt: "gobierno",
+  },
+  {
+    image: superior,
+    alt: "superior",
+  },
+];
 
 const Clientes = () => {
   const [contador, setContador] = useState(0);
@@ -30,7 +142,6 @@ const Clientes = () => {
         trigger: clientesRef.current,
         start: "top center",
         onEnter: () => setContador(1),
-        onLeave: () => setContador(0),
       },
     });
     tl.fromTo(
@@ -69,12 +180,14 @@ const Clientes = () => {
       tl.fromTo(
         element,
         {
+          y: -100,
           scale: 0.2,
           opacity: 0,
         },
         {
+          y: 0,
           opacity: 1,
-          duration: 0.3,
+          duration: 0.2,
           scale: 1,
         },
         `${index}*0.1`
@@ -103,15 +216,14 @@ const Clientes = () => {
           <h2>NUESTROS CLIENTES</h2>
         </section>
       </div>
-      <div className="box">
+      <div className=" box-clientes">
         <section className="section-flecha ">
           <Image src={flecha} alt="flecha" className="flecha" />
         </section>
         <section className="section-img-logos">
-          <Image src={repsol} alt="repsol" />
-          <Image src={repsol} alt="repsol" />
-          <Image src={repsol} alt="repsol" />
-          <Image src={repsol} alt="repsol" />
+          {logos.map((el, index) => (
+            <Image key={index} src={el.image} alt={el.alt} />
+          ))}
         </section>
       </div>
     </div>

@@ -66,7 +66,9 @@ const Menu = () => {
               <div key={id}>
                 <div className="list-cont">
                   <li onClick={handleCambio}>
-                    <Link href={deruta}>{nombre}</Link>
+                    <Link scroll href={deruta}>
+                      {nombre}
+                    </Link>
                   </li>
                   <FaArrowRight className="icono" />
                 </div>

@@ -1,11 +1,13 @@
 import React, { forwardRef } from "react";
 import "./home-contact.scss";
 
-import insta from "/public/images/instagram.png";
-import x from "/public/images/x.png";
+import { BsFacebook } from "react-icons/bs";
+import { RiTwitterXFill } from "react-icons/ri";
+import { AiFillInstagram } from "react-icons/ai";
 import face from "/public/images/face.png";
 import Form from "./home-form";
 import Image from "next/image";
+import { IconContext } from "react-icons";
 
 const Contact = forwardRef((props, ref) => {
   return (
@@ -28,9 +30,11 @@ const Contact = forwardRef((props, ref) => {
       </div>
       <div className="contact-box">
         <div className="contact-box3">
-          <Image src={insta} alt="instagram" />
-          <Image src={face} alt="face" />
-          <Image src={x} alt="x" />
+          <IconContext.Provider value={{ size: "6rem" }}>
+            <BsFacebook />
+            <AiFillInstagram />
+            <RiTwitterXFill />
+          </IconContext.Provider>
         </div>
       </div>
     </div>

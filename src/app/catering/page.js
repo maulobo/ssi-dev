@@ -4,6 +4,7 @@ import CateringIntro from "../components/catering-intro";
 import CateringCautiva from "../components/catering-cautiva";
 import Imagenn from "../components/catering-image";
 import CateringSvg from "../components/catering-svg";
+import Footer from "../components/footer";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <CateringCautiva />
       <CateringSvg />
       <Imagenn />
+      <Footer />
     </div>
   );
 };

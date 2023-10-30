@@ -5,6 +5,7 @@
 }
 
 .clientes-container {
+  height: 100vh;
   background-color: $colorNegro;
   padding: $paddingBodyCenter;
   display: flex;
@@ -13,6 +14,7 @@
 .box {
   display: flex;
   justify-content: center;
+  align-items: center;
   p {
     color: $colorBlanco;
   }
@@ -46,7 +48,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+
     h2 {
+      color: $colorNegro;
       margin: 0;
       font-size: $fuenteStroke;
       -webkit-text-stroke: 2px $colorRojo;
@@ -71,4 +75,12 @@
     height: 100px;
     width: 100px;
   }
+}
+.box-clientes {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.section-flecha {
 }

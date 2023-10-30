@@ -6,6 +6,7 @@ import Division from "./home-division";
 import HomeCatering from "./home-catering";
 import HomeTransporte from "./home-transporte";
 import HomeServicios from "./home-servicios";
+import HomeTrailers from "./home-trailers";
 
 const Lateral = () => {
   const sectionRef = useRef(null);
@@ -55,7 +56,7 @@ const Lateral = () => {
           </section>
           <section className="scroll-section">
             <Division />
-            <HomeTransporte />
+            <HomeTrailers />
           </section>
         </div>
       </div>

@@ -15,9 +15,9 @@
     position: absolute;
     z-index: 1; /* Coloca el título por encima del fondo */
     font-size: $fuenteSubtitulos;
-    text-align: center;
+    text-align: end;
     color: $colorBlanco;
-    max-width: 70%;
+    max-width: 65%;
   }
   > div {
     min-width: 300px;

@@ -29,7 +29,6 @@ const svgs = [
 const CateringSvg = () => {
   const svgContainerRef = useRef(null);
   const svgRef = useRef([]);
-  console.log(svgRef);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     const tl = gsap.timeline({

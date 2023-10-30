@@ -7,12 +7,15 @@ export default function AccordionTrailer() {
     base: "text-white",
     title: "font-normal text-medium text-white",
   };
-  const itemClasses2 = {
-    base: "text-white",
-    title: "font-normal text-medium text-white",
-  };
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+  const personalizacion =
+    "Puedes diseñar y personalizar tu espacio de manera única para satisfacer tus necesidades y gustos específicos.";
+  const mantenimiento =
+    "Requieren menos mantenimiento que una casa convencional debido a su tamaño más pequeño y diseño simplificado.";
+  const minimalista =
+    "Fomentan un estilo de vida más minimalista, lo que puede ayudar a reducir el estrés y el consumo excesivo.";
+  const diseno =
+    "Puedes adaptar y modificar fácilmente el diseño interior para cambiar tus necesidades a lo largo del tiempo";
 
   return (
     <Accordion itemClasses={itemClasses}>
@@ -23,7 +26,7 @@ export default function AccordionTrailer() {
         indicator="+"
         title="PERSONALIZACION"
       >
-        {defaultContent}
+        {personalizacion}
       </AccordionItem>
       <AccordionItem
         style={{ borderTop: "1px solid" }}
@@ -32,7 +35,7 @@ export default function AccordionTrailer() {
         indicator="+"
         title="MANTENIMIENTO"
       >
-        {defaultContent}
+        {mantenimiento}
       </AccordionItem>
       <AccordionItem
         style={{ borderTop: "1px solid" }}
@@ -41,7 +44,7 @@ export default function AccordionTrailer() {
         indicator="+"
         title="MINIMALISTA"
       >
-        {defaultContent}
+        {minimalista}
       </AccordionItem>
       <AccordionItem
         style={{ borderBlock: "1px solid" }}
@@ -50,7 +53,7 @@ export default function AccordionTrailer() {
         indicator="+"
         title="DISENO FLEXIBLE"
       >
-        {defaultContent}
+        {diseno}
       </AccordionItem>
     </Accordion>
   );

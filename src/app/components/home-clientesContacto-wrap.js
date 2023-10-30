@@ -9,7 +9,6 @@ import { ScrollTrigger } from "gsap/all";
 const Clientescontacto = () => {
   gsap.registerPlugin(ScrollTrigger);
   const mainRef = useRef(null);
-  const clientesRef = useRef(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
@@ -21,8 +20,6 @@ const Clientescontacto = () => {
         pin: true,
       },
     });
-    console.log(mainRef.current.clientHeight);
-    console.log(contactRef.current.clientHeight);
     tl.to(
       contactRef.current,
       {
@@ -34,7 +31,7 @@ const Clientescontacto = () => {
 
   return (
     <div ref={mainRef} className="wrapper-content-cc">
-      <Clientes ref={clientesRef} />
+      <Clientes />
       <Contact ref={contactRef} />
     </div>
   );

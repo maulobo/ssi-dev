@@ -1,5 +1,4 @@
 import React from "react";
-import trailerpic from "public/images/trailerpic.jpg";
 import Image from "next/image";
 import AccordionTrailer from "./trailers-accordion";
 import "./trailers-black.scss";
@@ -7,7 +6,9 @@ import "./trailers-black.scss";
 const TrailerBlack = () => {
   return (
     <div className="imageClass">
-      <Image src={trailerpic} alt="trailer" />
+      <video autoPlay loop muted alt="trailerLoop">
+        <source src="video/LOOP.mp4" />
+      </video>
       <div className="acordion">
         <AccordionTrailer />
       </div>

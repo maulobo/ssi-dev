@@ -1,0 +1,45 @@
+@import "../globals.scss";
+.footer-container {
+  font-size: large;
+  color: $colorBlanco;
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-div {
+  padding: $paddingBodyCenter;
+  flex: 1;
+  max-width: 50%;
+  background-color: $colorNegro;
+  min-width: 300px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.footer-div-box {
+  gap: 10px;
+  display: flex;
+  flex: 1;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    font-size: x-large;
+  }
+}
+.footer-png {
+  display: flex;
+  gap: 50px;
+}
+.footer-div-der {
+  font-size: $fuenteStroke;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: $colorNegro;
+    margin: 0;
+    -webkit-text-stroke: 2px $colorBlanco;
+    line-height: 1;
+  }
+}
