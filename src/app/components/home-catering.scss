@@ -13,7 +13,7 @@
   .h2 {
     top: 10%;
     position: absolute;
-    z-index: 1; /* Coloca el título por encima del fondo */
+    z-index: 1;
     font-size: $fuenteSubtitulos;
     text-align: center;
     color: $colorBlanco;
@@ -37,14 +37,9 @@
   display: flex;
 }
 .div-izq {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-
-  > section {
-    flex: 1;
-    overflow-y: hidden;
-  }
 }
 
 .img {
@@ -54,17 +49,21 @@
   overflow: hidden;
 }
 .section-p {
+  flex: 0 0 38%;
   display: flex;
-  align-items: center;
+  text-align: end;
+  align-items: flex-end;
+  overflow-y: hidden;
   padding: $paddingBodyCenter;
 }
 
 .section-svg {
+  flex: 1;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   transition: all ease 3s;
-
+  padding: 8% 0;
   :nth-child(1) {
     transform: translate(20%, 20%);
     transition: all ease 3s;

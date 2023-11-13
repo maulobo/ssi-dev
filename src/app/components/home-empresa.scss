@@ -21,7 +21,7 @@
       text-align: center;
       margin-left: auto;
       max-width: 70%;
-
+      font-size: $fuenteSubtitulos;
       h2 {
         font-size: $fuenteSubtitulos;
         line-height: 1;
@@ -46,12 +46,20 @@
     }
   }
 }
+.text-empresa {
+  font-size: $fuenteTexto;
+  padding: 6% 0 15% 0;
+}
+.nuestros-text {
+  font-size: $fuenteTexto;
+  padding: 6% 0 15% 0;
+}
 .contenedor {
   position: relative;
   background-color: $colorNegro;
   color: $colorBlanco;
   @include divEspacio(center);
-  min-height: 100vh;
+  min-height: 120vh;
   padding: $paddingBodyCenter;
   > div {
     flex: 1;

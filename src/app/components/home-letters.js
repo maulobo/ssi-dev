@@ -7,10 +7,7 @@ import {
 } from "framer-motion";
 
 const Letters = () => {
-  const { scrollYProgress } = useScroll();
-  const x1 = useTransform(scrollYProgress, [0, 1], [-200, 200]);
-  const x2 = useTransform(scrollYProgress, [0, 1], [0, 600]);
-
+  
   return (
     <div className="letters-container">
       <motion.h2

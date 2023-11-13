@@ -8,7 +8,7 @@ const HomeServicios = () => {
       <div>
         <aside className="firstNuestros">
           <h2>NUESTROS SERVICIOS</h2>
-          <p>
+          <p className="nuestros-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum
             accusamus fugiat unde expedita iusto natus odio distinctio molestias
             quo asperiores, aliquid facilis voluptatibus iure, modi a alias

@@ -34,8 +34,6 @@ const SvgMap = () => {
         viewBox="0 0 1080 1550"
         className="svg-container"
       >
-        <defs></defs>
-        <title>Mesa de trabajo 1</title>
         <g id="Capa_1" data-name="Capa 1">
           <path
             className="cls-1"

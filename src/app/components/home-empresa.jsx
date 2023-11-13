@@ -47,16 +47,16 @@ const Empresa = () => {
 
   return (
     <div ref={contenedorRef} className="contenedor">
-      <div ref={mapRef}>
+      <span ref={mapRef}>
         <SvgMap />
-      </div>
+      </span>
       <div>
         <div className="first">
           <div ref={titleRef}>
             <h2>NUESTRA</h2>
             <h2>EMPRESA</h2>
           </div>
-          <p ref={pRef}>
+          <p ref={pRef} className="text-empresa">
             Somos una compañía de servicios generales con perso- nal capacitado
             siempre a la altura de las circunstan- cias que se presentan.
             Nuestra visión es ampliar la capacidad y experiencia para garantizar
