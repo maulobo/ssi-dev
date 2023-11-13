@@ -2,13 +2,14 @@
 import { Suspense, useEffect, useLayoutEffect, useState } from "react";
 import Empresa from "./components/home-empresa";
 
-import Clientescontacto from "./components/home-clientesContacto-wrap";
 import Letters from "./components/home-letters";
 import Loader from "./components/Loader/Loader";
 import gsap from "gsap";
 import HomeHero from "./components/home-hero";
 import Lateral from "./components/home-lateral";
-import Division from "./components/home-division";
+
+import Clientes from "./components/home-clientes";
+import Contact from "./components/home-contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -35,7 +36,8 @@ export default function Home() {
           <Letters />
           <Empresa />
           <Lateral />
-          <Clientescontacto />
+          <Clientes />
+          <Contact />
         </div>
       )}
     </main>

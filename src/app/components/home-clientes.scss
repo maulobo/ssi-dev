@@ -1,8 +1,5 @@
 @import "../globals.scss";
 
-.wrapper-content-cc {
-  height: 100vh;
-}
 .text-ape {
   text-align: start;
   font-size: $fuenteTexto;
@@ -10,8 +7,9 @@
 .h2-nuestrosC {
   line-height: 100px;
 }
+
 .clientes-container {
-  height: 100vh;
+  height: auto;
   background-color: $colorNegro;
   padding: $paddingBodyCenter;
   display: flex;

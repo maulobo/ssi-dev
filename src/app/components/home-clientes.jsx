@@ -196,34 +196,36 @@ const Clientes = () => {
   }, []);
 
   return (
-    <div ref={clientesRef} className="clientes-container wrapper-content-cc">
-      <div className="box box-1-container ">
-        <section>
-          <h2>{contador}</h2>
-        </section>
-        <div></div>
-        <section>
-          <p className="text-ape">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            voluptas at dolorum tempore pariatur amet fugit!
-          </p>
-        </section>
-      </div>
-      <div className="box box-title">
-        <section className="box-box1"></section>
-        <section className="box-box2">
-          <h2 className="h2-nuestrosC">NUESTROS CLIENTES</h2>
-        </section>
-      </div>
-      <div className=" box-clientes">
-        <section className="section-flecha ">
-          <Image src={flecha} alt="flecha" className="flecha" />
-        </section>
-        <section className="section-img-logos">
-          {logos.map((el, index) => (
-            <Image key={index} src={el.image} alt={el.alt} />
-          ))}
-        </section>
+    <div className="clientes-container-main">
+      <div ref={clientesRef} className="clientes-container">
+        <div className="box box-1-container ">
+          <section>
+            <h2>{contador}</h2>
+          </section>
+          <div></div>
+          <section>
+            <p className="text-ape">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem voluptas at dolorum tempore pariatur amet fugit!
+            </p>
+          </section>
+        </div>
+        <div className="box box-title">
+          <section className="box-box1"></section>
+          <section className="box-box2">
+            <h2 className="h2-nuestrosC">NUESTROS CLIENTES</h2>
+          </section>
+        </div>
+        <div className=" box-clientes">
+          <section className="section-flecha ">
+            <Image src={flecha} alt="flecha" className="flecha" />
+          </section>
+          <section className="section-img-logos">
+            {logos.map((el, index) => (
+              <Image key={index} src={el.image} alt={el.alt} />
+            ))}
+          </section>
+        </div>
       </div>
     </div>
   );
