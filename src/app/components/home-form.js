@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Input } from "@nextui-org/react";
-
+import "./home-contact.scss";
 const Form = () => {
   return (
     <form>
@@ -9,23 +9,20 @@ const Form = () => {
         <Input
           type="text"
           label="Nombre y Apellido"
-          placeholder="Ingrese su nombre y apellido"
+          placeholder="Ingrese su Nombre y Apellido"
         />
         <Input type="number" label="Telefono" startContent="+549" />
+
         <Input
           type="email"
           label="Email"
-          placeholder="Enter your email"
-          datatype="2"
-        />
-        <Input
-          type="email"
-          label="Email"
-          placeholder="Enter your email"
+          placeholder="Ingrese su email"
           isClearables
         />
-        <Input type="email" label="Email" />
-        <Input type="submit" radius="md" variant="bordered" />
+        <Input type="text" label="consulta" placeholder="Ingrese su consulta" />
+        <button type="submit" className="buttonEnv">
+          Enviar
+        </button>
       </div>
     </form>
   );

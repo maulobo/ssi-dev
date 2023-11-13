@@ -1,6 +1,7 @@
 @import "../globals.scss";
 .contact-container {
-  padding: $paddingBodyCenter;
+  border-radius: 7% 7% 0 0;
+  padding: 6% 8% 6% 8%;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -42,6 +43,7 @@
       text-align: end;
       font-size: $fuenteContact;
       margin: 0;
+      line-height: 150px;
     }
   }
   .contact-p {
@@ -71,4 +73,9 @@
   .contact-box1 {
     order: 2; // Cambia el orden para pantallas pequeñas
   }
+}
+.buttonEnv {
+  padding: 0.5rem 2rem;
+  border: 2px solid $colorNegro;
+  border-radius: 10px;
 }

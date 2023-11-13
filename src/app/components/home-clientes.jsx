@@ -4,6 +4,7 @@ import gsap from "gsap";
 import "./home-clientes.scss";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
+import { BsArrowRightCircle } from "react-icons/bs";
 import flecha from "/public/images/flecha.png";
 import aesa from "/public/images/logos/aesa.png";
 import ge from "/public/images/logos/ge.png";
@@ -217,9 +218,7 @@ const Clientes = () => {
           </section>
         </div>
         <div className=" box-clientes">
-          <section className="section-flecha ">
-            <Image src={flecha} alt="flecha" className="flecha" />
-          </section>
+          <BsArrowRightCircle className="flecha" />
           <section className="section-img-logos">
             {logos.map((el, index) => (
               <Image key={index} src={el.image} alt={el.alt} />
