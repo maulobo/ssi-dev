@@ -1,7 +1,7 @@
 import React from "react";
 import "./home-division.scss";
 
-const Division = ({ number = "01", servicio = "servicio 01" }) => {
+const Division = ({ number = 0, servicio = "Nuestros servicios" }) => {
   return (
     <div className="division-container">
       <section>

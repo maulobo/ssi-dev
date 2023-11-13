@@ -50,7 +50,7 @@ const Lateral2 = () => {
         <Servicios />
       </section>
       <div ref={(el) => sections.current.push(el)} className="section3">
-        <Division number="01" servicio="CATERING" />
+        <Division />
       </div>
       <section
         ref={(el) => sections.current.push(el)}

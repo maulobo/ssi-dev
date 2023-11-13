@@ -201,19 +201,18 @@ const Clientes = () => {
         <section>
           <h2>{contador}</h2>
         </section>
+        <div></div>
         <section>
           <p className="text-ape">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            voluptas at dolorum tempore pariatur amet fugit! Magni quas cumque
-            ducimus placeat tempore, doloremque repudiandae, quibusdam magnam
-            autem enim sed commodi.
+            voluptas at dolorum tempore pariatur amet fugit!
           </p>
         </section>
       </div>
       <div className="box box-title">
         <section className="box-box1"></section>
         <section className="box-box2">
-          <h2>NUESTROS CLIENTES</h2>
+          <h2 className="h2-nuestrosC">NUESTROS CLIENTES</h2>
         </section>
       </div>
       <div className=" box-clientes">

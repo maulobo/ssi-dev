@@ -9,7 +9,7 @@ const HomeTrailers = () => {
     <>
       <div className="home-contenedor-catering">
         <div className="h2">
-          <h2>TRANSPORTE & ALQUILER</h2>
+          <h2>MODULOS HABITACIONALES</h2>
         </div>
         <div className="mitad-izq">
           <section className="div-izq">
