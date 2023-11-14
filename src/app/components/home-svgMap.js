@@ -13,18 +13,20 @@ const SvgMap = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: contRef.current,
-        start: "top=100 center",
-        end: "bottom center",
         scrub: 1,
+        end: "bottom center",
       },
     });
-    tl.to(lineaRef.current, {
-      opacity: 1,
-      strokeDashoffset: 0,
-      duration: 1,
-    }).to(circleRef.current, {
-      opacity: 1,
-    });
+    tl.fromTo(
+      circleRef.current,
+      {
+        scale: 0.5,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+      }
+    );
   }, []);
 
   return (
@@ -47,16 +49,6 @@ const SvgMap = () => {
             cx="736"
             cy="1071"
             r="122"
-          />
-        </g>
-        <g id="Capa_3" data-name="Capa 3">
-          <line
-            ref={lineaRef}
-            className="cls-3"
-            x1="736.5"
-            y1="71.5"
-            x2="736.5"
-            y2="1071.5"
           />
         </g>
       </svg>
