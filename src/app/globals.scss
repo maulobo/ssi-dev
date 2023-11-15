@@ -8,7 +8,7 @@ $fuenteMenu: clamp(
   16px + ((50px - 16px) * (1000px - 500px) / (2500px - 500px)),
   50px
 ); //solo fuente del menu
-$fuenteDesplaz: clamp(2.5em, 8em, 15vw);
+$fuenteDesplaz: clamp(2.5em, 4em, 12vw);
 $fuenteSubtitulos: clamp(1.7em, 6em, 8vw);
 //$contactoFuente:  // SOLO para la parte de contacto FALTA VER
 $fuenteTexto: clamp(
@@ -112,5 +112,5 @@ h2 {
 }
 
 body {
-  background-color: #000000;
+  background-color: $colorNegro;
 }

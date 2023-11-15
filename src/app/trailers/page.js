@@ -10,9 +10,9 @@ import TrailersTrailer from "../components/trailers-trailer";
 import Footer from "../components/footer";
 
 const phrase1 =
-  "lorem ipsum dolor sit amet, consectetlknasfklsnvklsnv;lkasnkasnclkmas cnsa cklj nkjnc lkjabnf lkjwn lkjqwnf lkjqanf lkajnf kl";
+  "Las casas móviles suelen construirse en un entorno controlado y se pueden fabricar más rápidamente que las casas tradicionales, lo que significa que puedes mudarte a tu nueva vivienda más rápido.";
 const phrase2 =
-  "lorem ipsum dolor sit amet, consectetlknasfklsnvklsnv;lkasnkasnclkmas cnsa cklj nkjnc lkjabnf lkjwn lkjqwnf lkjqanf lkajnf kl";
+  "A pesar de su tamaño compacto, muchas viviendas en remolques están equipadas con comodidades modernas como cocinas, baños y sistemas de entretenimiento.";
 
 export function Loader() {
   return (

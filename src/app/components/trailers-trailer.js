@@ -10,6 +10,7 @@ const TrailersTrailer = () => {
         <div className={`block-covered ${active ? "active" : ""}`}>
           <button onClick={() => setActive(!active)}>Inspeccionar</button>
         </div>
+
         <Scene />
       </div>
     </div>

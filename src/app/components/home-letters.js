@@ -1,13 +1,7 @@
 import "./home-letters.scss";
-import {
-  motion,
-  useAnimationFrame,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Letters = () => {
-  
   return (
     <div className="letters-container">
       <motion.h2

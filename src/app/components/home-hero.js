@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const HomeHero = () => {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], ["0px", "-4000px"]);
+  let y = useTransform(scrollYProgress, [0, 1], ["0px", "-5000px"]);
   return (
     <>
       <div className="video-hero-container">
