@@ -35,11 +35,13 @@ const Page = () => {
     <>
       <main className="trailers-container">
         <HeroTrailers />
-        <Appears phrase={phrase1} title="Rapida construccion" />
+        <Appears phrase={phrase1} title="Rápida construcción" />
         <Transportables />
-        <Appears phrase={phrase2} />
+        <Appears phrase={phrase2} title="Titulo dos" />
         <TrailerBlack />
-        <TrailersTrailer />
+        <section className="cont-3d">
+          <TrailersTrailer />
+        </section>
         <Footer />
       </main>
     </>

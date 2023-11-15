@@ -53,7 +53,7 @@ $lineaAncho: clamp(3px, calc(0.15vw + 1px), 6px);
 
 $paddingBodyCenter: 0 8% 0 8%;
 $paddingBodyCenterLaterales: 0 8% 0 13%;
-
+$paddingconTop: 5% 8%;
 //MARGENES BAJOS DE TITULOS GRANDES
 
 $margenBajoTitulo: 7.5rem; // ver en pantalla depende del largo y ancho para el responsivo, pasar a %
@@ -82,6 +82,24 @@ $margenBajoTitulo: 7.5rem; // ver en pantalla depende del largo y ancho para el 
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@mixin heroPages {
+  opacity: 0;
+  line-height: 16vh;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 2;
+  color: $colorBlanco;
+  h1 {
+    font-size: $fuenteSubtitulos;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+  }
+  h2 {
+    font-size: $fuenteSubtitulos;
+  }
 }
 
 * {

@@ -1,13 +1,16 @@
 @import "../globals.scss";
 .intro-container {
-  min-height: 100vh;
+  position: relative;
+  min-height: 80vh;
   display: flex;
   padding: $paddingBodyCenter;
 }
 .intro-frutas {
   flex: 1;
 }
-
+.Uuno {
+  position: absolute;
+}
 .intro-p {
   flex: 1;
   color: $colorBlanco;

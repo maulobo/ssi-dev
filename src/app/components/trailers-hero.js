@@ -14,7 +14,7 @@ const HeroTrailers = () => {
   return (
     <div>
       <div className="trailer-hero-title">
-        <h1>TRAILERS & MÓDULOS</h1>
+        <h1>Trailers & módulos</h1>
         <h2>Una nueva forma</h2>
         <h2>de construcción</h2>
       </div>

@@ -55,7 +55,7 @@ const Appears = ({ title = "", phrase }) => {
 
   return (
     <div ref={container} className="letters-main">
-      <h2>{title}</h2>
+      <h2 className="letters-ap-title">{title}</h2>
       <div className="apperas">{splitWords()}</div>
     </div>
   );

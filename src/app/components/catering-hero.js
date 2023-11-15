@@ -14,8 +14,8 @@ const HeroCatering = () => {
   return (
     <div>
       <div className="catering-hero-title">
-        <h1>SERVICIO</h1>
-        <h2>DE CATERING</h2>
+        <h1>Catering</h1>
+        <h2>Exquisita experiencia gastronómica</h2>
       </div>
       <video autoPlay loop muted className="video">
         <source src="/video/herotrailer.mp4" type="video/mp4" />

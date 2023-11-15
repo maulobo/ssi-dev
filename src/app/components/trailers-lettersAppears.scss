@@ -1,12 +1,13 @@
 @import "../globals.scss";
 .letters-main {
-  min-height: 40vh;
   @include divEspacio(center);
-  padding: $paddingBodyCenter;
+  padding: $paddingconTop;
   justify-content: center;
-  align-items: center;
-  h2 {
-    font-size: 3vw;
+  height: 110vh;
+  .letters-ap-title {
+    font-size: 4vw;
+    text-align: start;
+    padding: 1rem 0;
   }
 }
 
@@ -19,6 +20,7 @@
   font-size: 2.5vw;
   margin: 0px;
   margin-right: 0.5vw;
+  font-weight: 500;
 }
 .apperas span {
   opacity: 0.2;

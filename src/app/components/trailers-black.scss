@@ -1,6 +1,8 @@
+@import "../globals.scss";
 .imageClass {
   position: relative;
   overflow: hidden;
+  height: 100vh;
 }
 .acordion {
   width: 40%;
@@ -19,10 +21,14 @@
     left: 0;
     top: 0;
     > div {
-      font-size: small;
+      font-size: medium;
       span {
-        font-size: small;
+        font-size: medium;
       }
     }
   }
+}
+.p-font {
+  font-size: $fontTamnio;
+  padding: 0.5rem 0;
 }

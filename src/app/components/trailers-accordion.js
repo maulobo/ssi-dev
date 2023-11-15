@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import "./trailers-black.scss";
 
 export default function AccordionTrailer() {
   const itemClasses = {
     base: "text-white",
-    title: "font-normal text-medium text-white",
+    title: "font-medium text-xl text-white",
   };
 
   const personalizacion =
@@ -20,40 +21,40 @@ export default function AccordionTrailer() {
   return (
     <Accordion itemClasses={itemClasses}>
       <AccordionItem
-        style={{ borderTop: "1px solid" }}
+        style={{ borderTop: "2px solid" }}
         key="personal"
         aria-label="PERSONALIZACION"
         indicator="+"
         title="PERSONALIZACION"
       >
-        {personalizacion}
+        <p className="p-font">{personalizacion}</p>
       </AccordionItem>
       <AccordionItem
-        style={{ borderTop: "1px solid" }}
+        style={{ borderTop: "2px solid" }}
         key="mantenimiento"
         aria-label="MANTENIMIENTO"
         indicator="+"
         title="MANTENIMIENTO"
       >
-        {mantenimiento}
+        <p className="p-font">{mantenimiento}</p>
       </AccordionItem>
       <AccordionItem
-        style={{ borderTop: "1px solid" }}
+        style={{ borderTop: "2px solid" }}
         key="minimalista"
         aria-label="MINIMALISTA"
         indicator="+"
         title="MINIMALISTA"
       >
-        {minimalista}
+        <p className="p-font">{minimalista}</p>
       </AccordionItem>
       <AccordionItem
-        style={{ borderBlock: "1px solid" }}
+        style={{ borderBlock: "2px solid" }}
         key="diseno"
         aria-label="DISENO FLEXIBLE"
         indicator="+"
         title="DISENO FLEXIBLE"
       >
-        {diseno}
+        <p className="p-font">{diseno}</p>
       </AccordionItem>
     </Accordion>
   );

@@ -19,7 +19,7 @@ const Form = () => {
           placeholder="Ingrese su email"
           isClearables
         />
-        <Input type="text" label="consulta" placeholder="Ingrese su consulta" />
+        <Input type="text" label="Consulta" placeholder="Ingrese su consulta" />
         <button type="submit" className="buttonEnv">
           Enviar
         </button>
