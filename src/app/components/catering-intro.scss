@@ -1,15 +1,61 @@
 @import "../globals.scss";
 .intro-container {
   position: relative;
-  min-height: 80vh;
+  min-height: 40vw;
   display: flex;
   padding: $paddingBodyCenter;
+  @media (max-width: 850px) {
+    min-height: 50vw;
+  }
 }
+
 .intro-frutas {
-  flex: 1;
+  width: 40%;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 20vw);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
 }
-.Uuno {
+
+.intro-frutas img {
+  height: 30vh;
+  width: auto;
   position: absolute;
+}
+
+.intro-frutas img[alt="unafrutita"] {
+  height: clamp(80px, 20vw, 60vh);
+  top: -30%;
+  left: 1%;
+}
+
+.intro-frutas img[alt="picante"] {
+  height: clamp(80px, 15vw, 50vh);
+  top: -10%;
+  right: -150%;
+}
+
+.intro-frutas img[alt="palta"] {
+  height: 10vw;
+  left: -5%;
+  bottom: 0%;
+}
+
+.intro-frutas img[alt="laranja"] {
+  height: 30vw;
+  bottom: 15%;
+  right: 0;
+}
+
+.intro-p {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.intro-box {
+  color: #f0f0f0;
+  padding: 20px;
 }
 .intro-p {
   flex: 1;
@@ -17,6 +63,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.intro-box {
 }

@@ -12,7 +12,7 @@ const HeroCatering = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div className="catering-hero-title">
         <h1>Catering</h1>
         <h2>Exquisita experiencia gastronómica</h2>
