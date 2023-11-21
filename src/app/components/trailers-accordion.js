@@ -7,6 +7,7 @@ export default function AccordionTrailer() {
   const itemClasses = {
     base: "text-white",
     title: "font-medium text-xl text-white",
+    indicator: "text-lg",
   };
 
   const personalizacion =
