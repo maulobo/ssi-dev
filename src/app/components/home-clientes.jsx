@@ -5,7 +5,6 @@ import "./home-clientes.scss";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { BsArrowRightCircle } from "react-icons/bs";
-import flecha from "/public/images/flecha.png";
 import aesa from "/public/images/logos/aesa.png";
 import ge from "/public/images/logos/ge.png";
 import schlumberger from "/public/images/logos/schlumberger.png";
@@ -18,15 +17,11 @@ import siderca from "/public/images/logos/siderca.png";
 import cameron from "/public/images/logos/cameron.png";
 import contreras from "/public/images/logos/contreras.png";
 import pan from "/public/images/logos/pan.png";
-import epas from "/public/images/logos/epas.jpeg";
-import pampa from "/public/images/logos/pampa.jpeg";
-import pecom from "/public/images/logos/pecom.jpg";
-import weather from "/public/images/logos/Weatherford.jpg";
-import bolland from "/public/images/logos/bolland.jpeg";
-import delacon from "/public/images/logos/delacon.jpg";
-import uga from "/public/images/logos/uga.jpeg";
-import lomalata from "/public/images/logos/lomalata.jpeg";
-import gobierno from "/public/images/logos/gobierno.png";
+import pampa from "/public/images/logos/pampa.png";
+import pecom from "/public/images/logos/pecom.png";
+import weather from "/public/images/logos/Weatherford.png";
+import bolland from "/public/images/logos/bolland.png";
+
 import superior from "/public/images/logos/superior.png";
 
 const logos = [
@@ -51,16 +46,12 @@ const logos = [
     alt: "techint",
   },
   {
-    image: tecpetrol,
-    alt: "tecpetrol",
-  },
-  {
     image: pecom,
     alt: "pecom",
   },
   {
-    image: epas,
-    alt: "epas",
+    image: tecpetrol,
+    alt: "tecpetrol",
   },
   {
     image: pampa,
@@ -94,25 +85,10 @@ const logos = [
     image: pan,
     alt: "pan",
   },
-  {
-    image: delacon,
-    alt: "delacon",
-  },
+
   {
     image: bolland,
     alt: "bolland",
-  },
-  {
-    image: lomalata,
-    alt: "lomalata",
-  },
-  {
-    image: uga,
-    alt: "uga",
-  },
-  {
-    image: gobierno,
-    alt: "gobierno",
   },
   {
     image: superior,
