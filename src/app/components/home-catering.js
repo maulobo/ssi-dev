@@ -14,8 +14,7 @@ const HomeCatering = () => {
   return (
     <>
       <div className="home-contenedor-catering">
-        <h2 className="h2-laterales">SERVICIO DE CATERING</h2>
-
+        <h2 className="h2-laterales">SERVICIO EXCLUSIVO</h2>
         <div className="mitad-izq">
           <section className="div-izq">
             <section className="section-p-lateralesHome">
