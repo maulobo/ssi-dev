@@ -2,9 +2,12 @@
 .catering-hero-title {
   @include heroPages;
 }
+.hero-cont {
+  position: relative;
+}
 .cateringsvg-container {
   background-color: $colorBlanco;
-  min-height: 60vh;
+  padding: 10% 8%;
   display: flex;
   justify-content: center;
   align-items: center;

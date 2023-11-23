@@ -10,6 +10,7 @@ $fuenteMenu: clamp(
 ); //solo fuente del menu
 $fuenteDesplaz: clamp(2.5em, 4em, 12vw);
 $fuenteSubtitulos: 7vw;
+$fuenteSubtitulosMayus: 6vw;
 //$contactoFuente:  // SOLO para la parte de contacto FALTA VER
 $fuenteTexto: clamp(
   1em,
@@ -110,9 +111,14 @@ $margenBajoTitulo: 7.5rem; // ver en pantalla depende del largo y ancho para el 
   @media (max-width: 750px) {
     width: 90%;
     right: 15%;
+    bottom: 18%;
     h1 {
       -webkit-text-stroke: 1px rgb(255, 255, 255);
     }
+  }
+  @media (max-width: 400px) {
+    right: 20%;
+    width: 100%;
   }
 }
 

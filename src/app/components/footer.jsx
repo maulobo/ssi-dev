@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-div">
         <div className="footer-div-box">
           <h2>Contacto</h2>
-          <p>
+          <p className="p-footer">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
             ut. Quasi, est. Laudantium provident inventore harum earum, quaerat
             a unde perferendis? Ab beatae necessitatibus rerum rem nisi? Quae,

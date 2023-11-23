@@ -1,29 +1,35 @@
 @import "../globals.scss";
 .footer-container {
-  font-size: large;
   color: $colorBlanco;
   min-height: 50vh;
   display: flex;
   flex-wrap: wrap;
+  padding: 5% 0;
 }
 
 .footer-div {
   padding: $paddingconTop;
   flex: 1;
-  max-width: 50%;
+  width: 50%;
   background-color: $colorNegro;
   min-width: 300px;
   display: flex;
-  gap: 10px;
+  gap: 2rem;
   flex-direction: column;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 .footer-div-box {
   gap: 10px;
   display: flex;
-  flex: 1;
+
   align-items: left;
   justify-content: center;
   flex-direction: column;
+  .p-footer {
+    font-size: $fuenteTexto;
+  }
   h2 {
     font-size: x-large;
   }
