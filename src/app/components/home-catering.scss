@@ -10,7 +10,8 @@
   flex-direction: row;
   justify-content: center;
   background-color: $colorNegro;
-  .h2 {
+  .h2-laterales {
+    line-height: 1;
     top: 10%;
     position: absolute;
     z-index: 1;
@@ -22,11 +23,13 @@
     min-width: 300px;
   }
 }
-
-.mitad-der {
+.div-izq-baseYmodulos {
+}
+.mitad-der-home {
   width: 100%;
   height: 100%;
   flex: 1;
+  overflow: hidden;
 }
 
 /* Estilo para el lado izq */
@@ -42,13 +45,12 @@
   flex-direction: column;
 }
 
-.img {
+.img-home-laterales {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  overflow: hidden;
 }
-.section-p {
+.section-p-lateralesHome {
   flex: 0 0 42%;
   display: flex;
   text-align: end;
@@ -66,7 +68,8 @@
   transition: all ease 3s;
   padding: 4% 0;
   :nth-child(1) {
-    transform: translate(20%, 20%);
+    //cebolla
+    transform: translate(5%, 0%);
     transition: all ease 3s;
     &:hover {
       scale: 1.2;
@@ -74,74 +77,111 @@
     }
   }
   :nth-child(2) {
-    transform: translate(50%, 140%);
+    //chaucha
+    transform: translate(300%, 140%);
     transition: all ease 3s;
     &:hover {
       scale: 1.2;
       rotate: -20deg;
     }
+    @media (max-width: 900px) {
+      transform: translate(200%, 200%);
+      &:hover {
+        rotate: -5deg;
+      }
+    }
   }
   :nth-child(3) {
-    transform: translate(150%, 180%);
+    //ensalada
+    transform: translate(190%, 180%);
     transition: all ease 3s;
     &:hover {
       scale: 1.2;
       transform: translate(100%, 120%);
     }
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
   :nth-child(4) {
+    //palta
     transform: translate(80%, 100%);
     transition: all ease 3s;
     &:hover {
       scale: 1.2;
       transform: translate(80%, 100%);
     }
+    @media (max-width: 900px) {
+      transform: translate(80%, 230%);
+      scale: 1.4;
+      &:hover {
+        scale: 1.5;
+        rotate: 25deg;
+      }
+    }
   }
   :nth-child(5) {
-    transform: translate(70%, 20%);
+    //pimiento
+    transform: translate(230%, 0%);
     transition: all ease 1s;
     &:hover {
       scale: 1.2;
-      transform: translate(70%, 20%);
+      transform: translate(200%, 20%);
+    }
+    @media (max-width: 900px) {
+      scale: 1.5;
+      transform: translate(230%, 130%);
+      &:hover {
+        scale: 1.6;
+        transform: translate(200%, 120%);
+      }
     }
   }
   :nth-child(6) {
-    transform: translate(150%, 100%);
+    //tomate
+    transform: translate(150%, 50%);
     transition: all ease 3s;
     &:hover {
       scale: 1.2;
-      transform: translate(150%, 100%);
+      transform: translate(200%, 100%);
     }
   }
-  :nth-child(7) {
-    transform: translate(180%);
-    transition: all ease 3s;
-    &:hover {
-      scale: 1.2;
-      transform: translate(70%, 20%);
-    }
-  }
+
   > img {
     margin: 0;
     position: absolute;
     width: 35%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .home-contenedor-catering {
-    .h2 {
-      padding: $paddingBodyCenter;
-      top: 30%;
+    .h2-laterales {
+      text-align: end;
+      right: 14%;
+      top: 20%;
+      font-size: $fuenteSubtMayusRESIZE;
     }
   }
-
   .mitad-izq {
     padding: $paddingBodyCenter;
     position: absolute;
-    top: 50%;
+    bottom: -40%;
+  }
+  .section-p-lateralesHome {
+    align-items: flex-start;
+    flex: 0 0 20%;
+  }
+}
+@media (max-width: 500px) {
+  .mitad-izq {
+    //bottom: ;
+  }
+  .section-p-lateralesHome {
+    flex: 0 0 10%;
+    padding: 0;
   }
 
-  .img {
-    opacity: 0.5;
+  .h2-laterales {
+    right: 5% !important;
   }
 }

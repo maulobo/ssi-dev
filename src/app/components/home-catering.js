@@ -3,24 +3,22 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import "./home-catering.scss";
 import img from "/public/images/catering.jpg";
-import svg1 from "/public/images/svg/1.svg";
-import svg2 from "/public/images/svg/2.svg";
-import svg3 from "/public/images/svg/3.svg";
-import svg4 from "/public/images/svg/4.svg";
-import svg5 from "/public/images/svg/5.svg";
-import svg6 from "/public/images/svg/6.svg";
-import svg7 from "/public/images/svg/7.svg";
+import svg1 from "/public/images/svg/cebolla.svg";
+import svg2 from "/public/images/svg/chaucha.svg";
+import svg3 from "/public/images/svg/ensalada.svg";
+import svg4 from "/public/images/svg/palcotita.svg";
+import svg5 from "/public/images/svg/pimiento.svg";
+import svg6 from "/public/images/svg/tomatiro.svg";
 
 const HomeCatering = () => {
   return (
     <>
       <div className="home-contenedor-catering">
-        <div className="h2">
-          <h2>SERVICIO DE CATERING</h2>
-        </div>
+        <h2 className="h2-laterales">SERVICIO DE CATERING</h2>
+
         <div className="mitad-izq">
           <section className="div-izq">
-            <section className="section-p">
+            <section className="section-p-lateralesHome">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 ac quam a urna tincidunt faucibus. Sed venenatis magna vel risus
@@ -34,12 +32,15 @@ const HomeCatering = () => {
               <Image src={svg4} alt="nose" className="cuatro" />
               <Image src={svg5} alt="futi" className="cinco" />
               <Image src={svg6} alt="laranja" className="seis" />
-              <Image src={svg7} alt="pizza" className="siete" />
             </section>
           </section>
         </div>
-        <div className="mitad-der">
-          <Image src={img} alt="Imagen de catering" className="img" />
+        <div className="mitad-der-home">
+          <Image
+            src={img}
+            alt="Imagen de catering"
+            className="img-home-laterales"
+          />
         </div>
       </div>
     </>

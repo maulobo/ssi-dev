@@ -7,7 +7,7 @@ const HomeServicios = () => {
     <div className="contenedor2">
       <div>
         <aside className="firstNuestros">
-          <h2>NUESTROS SERVICIOS</h2>
+          <h2 className="nuestros-h2">NUESTROS SERVICIOS</h2>
           <p className="nuestros-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum
             accusamus fugiat unde expedita iusto natus odio distinctio molestias
