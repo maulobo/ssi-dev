@@ -1,30 +1,12 @@
-"use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./trailers-lettersAppears.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Appears = ({ title = "", phrase }) => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top center",
-        end: `center center`,
-        scrub: 1,
-      },
-    });
-    tl.to(refs.current, {
-      opacity: 1,
-      ease: "none",
-      stagger: 0.1,
-    });
-  }, []);
-
-  // Referencias
   const refs = useRef([]);
   const container = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const splitWords = () => {
     let body = [];
@@ -53,10 +35,41 @@ const Appears = ({ title = "", phrase }) => {
     return letters;
   };
 
+  useEffect(() => {
+    if (container.current && shouldAnimate) {
+      gsap.registerPlugin(ScrollTrigger);
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top center-=150px",
+          end: `center center`,
+          scrub: 1,
+        },
+      });
+
+      tl.to(refs.current, {
+        opacity: 1,
+        ease: "none",
+        stagger: 0.1,
+      });
+
+      return () => {
+        tl.kill();
+      };
+    }
+  }, [shouldAnimate]);
+
+  useEffect(() => {
+    // Activar la animación si hay frase
+    if (phrase) {
+      setShouldAnimate(true);
+    }
+  }, [phrase]);
+
   return (
     <div ref={container} className="letters-main">
       <h2 className="letters-ap-title">{title}</h2>
-      <div className="apperas">{splitWords()}</div>
+      <div className="apperas">{splitWords(phrase)}</div>
     </div>
   );
 };
