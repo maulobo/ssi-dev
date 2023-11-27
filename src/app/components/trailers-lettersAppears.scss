@@ -4,6 +4,13 @@
   padding: $paddingconTop;
   justify-content: center;
   height: 110vh;
+  @media screen and (max-width: 900px) {
+    height: 80vh;
+  }
+  @media (max-width: 600px) {
+    height: 60vh;
+  }
+
   .letters-ap-title {
     font-size: 4vw;
     text-align: start;

@@ -47,15 +47,15 @@ const Lateral = () => {
             <HomeServicios />
           </section>
           <section className="scroll-section">
-            <Division number={1} servicio={"Catering"} />
+            <Division number={1} servicio={"Catering exclusivo"} />
             <HomeCatering />
           </section>
           <section className="scroll-section">
-            <Division number={2} servicio={"Campamento integral"} />
+            <Division number={2} servicio={"Base integral"} />
             <HomeTransporte />
           </section>
           <section className="scroll-section">
-            <Division number={3} servicio={"Modulos habitacionales"} />
+            <Division number={3} servicio={"Modulos & trailers"} />
             <HomeTrailers />
           </section>
         </div>

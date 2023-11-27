@@ -12,7 +12,7 @@ const HeroTrailers = () => {
   }, []);
 
   return (
-    <div>
+    <div className="cont-hero-trailer">
       <div className="trailer-hero-title">
         <h1>Trailers & módulos</h1>
         <h2>Una nueva forma</h2>

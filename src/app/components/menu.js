@@ -25,7 +25,7 @@ const rutas = [
   {
     id: 4,
     nombre: "CONTACTO",
-    deruta: "/contactate",
+    deruta: "/contacto",
   },
 ];
 

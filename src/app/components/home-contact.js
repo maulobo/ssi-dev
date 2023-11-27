@@ -30,7 +30,7 @@ const Contact = forwardRef((props, ref) => {
       </div>
       <div className="contact-box">
         <div className="contact-box3">
-          <IconContext.Provider value={{ size: "6rem" }}>
+          <IconContext.Provider value={{ size: "9vw" }}>
             <BsFacebook />
             <AiFillInstagram />
             <RiTwitterXFill />

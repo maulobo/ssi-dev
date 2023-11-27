@@ -6,7 +6,7 @@ import "./trailers-black.scss";
 const TrailerBlack = () => {
   return (
     <div className="imageClass">
-      <video autoPlay loop muted alt="trailerLoop">
+      <video autoPlay loop muted alt="trailerLoop" className="videoAcordion">
         <source src="video/LOOP.mp4" />
       </video>
       <div className="acordion">

@@ -197,7 +197,7 @@ const Clientes = () => {
           <BsArrowRightCircle className="flecha" />
           <section className="section-img-logos">
             {logos.map((el, index) => (
-              <Image key={index} src={el.image} alt={el.alt} />
+              <Image key={index} src={el.image} alt="logos" />
             ))}
           </section>
         </div>
