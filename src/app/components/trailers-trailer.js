@@ -8,18 +8,18 @@ const TrailersTrailer = () => {
   const [active, setActive] = useState(false);
   return (
     <div>
-      {/* <div className="trailer-h2h2">
+      <div className="trailer-h2h2">
         <h2>Modulo habitacional</h2>
-      </div> */}
-      <Image src={interiorok} />
-      {/* <div className="trailer-container">
-       <div className="trailer-view">
-        <div className={`block-covered ${active ? "active" : ""}`}>
-          <button onClick={() => setActive(!active)}>Inspeccionar</button>
-        </div>
-        <Scene />
       </div>
-     </div> */}
+      {/* <Image src={interiorok} /> */}
+      <div className="trailer-container">
+        <div className="trailer-view">
+          <div className={`block-covered ${active ? "active" : ""}`}>
+            <button onClick={() => setActive(!active)}>Inspeccionar</button>
+          </div>
+          <Scene />
+        </div>
+      </div>
     </div>
   );
 };

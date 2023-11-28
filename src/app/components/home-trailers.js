@@ -14,9 +14,9 @@ const HomeTrailers = () => {
           <section className="div-izq">
             <section className="section-p-lateralesHome">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                ac quam a urna tincidunt faucibus. Sed venenatis magna vel risus
-                cursus tincidunt.
+                Los módulos habitacionales están hechas con contenedores
+                marítimos y son sustitutos ideales de las construcciones
+                convencionales.
               </p>
             </section>
             <section className="section-svg"> aca va un svg</section>

@@ -17,8 +17,8 @@ const HeroCatering = () => {
         <h1>Catering</h1>
         <h2>Exquisita experiencia gastronómica</h2>
       </div>
-      <video autoPlay loop muted className="video">
-        <source src="/video/herotrailer.mp4" type="video/mp4" />
+      <video autoPlay loop muted className="video video-cat">
+        <source src="/video/catering.mp4" type="video/mp4" />
       </video>
     </div>
   );

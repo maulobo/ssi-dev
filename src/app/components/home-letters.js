@@ -9,7 +9,7 @@ const Letters = () => {
         animate={{ x: 200 }}
         transition={{ repeat: Infinity, duration: 12, repeatType: "reverse" }}
       >
-        DESCUBRA NUESTRA DEDICACION EXPERIENCIA INNOVACION
+        DEDICACIÓN EXPERIENCIA INNOVACIÓN PROFESIONALISMO SERVICIO EMPRESA
       </motion.h2>
       <motion.h2
         initial={{ x: 200 }}
@@ -21,7 +21,8 @@ const Letters = () => {
           damping: 10,
         }}
       >
-        Y PROFESIONALISMO EN NUESTRO SERVICIO
+        CATERING ALQUILER INSUMOS PETROLEROS VENTA TRAILER MÓDULOS
+        HABITACIONALES
       </motion.h2>
     </div>
   );

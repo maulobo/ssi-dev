@@ -18,7 +18,7 @@ const HeroTrailers = () => {
         <h2>Una nueva forma</h2>
         <h2>de construcción</h2>
       </div>
-      <video autoPlay loop muted className="video">
+      <video autoPlay loop muted className="video video-trailer">
         <source src="/video/herotrailer.mp4" type="video/mp4" />
       </video>
     </div>

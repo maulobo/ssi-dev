@@ -22,3 +22,13 @@
 .cont-3d {
   padding: $paddingconTop;
 }
+@media (max-width: 400px) {
+  .video-trailer {
+    display: none;
+  }
+  .cont-hero-trailer {
+    height: 30vh;
+    background: url("/images/bannerTrailer.jpeg") center;
+    background-size: cover;
+  }
+}

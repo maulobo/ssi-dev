@@ -19,9 +19,9 @@ const HomeCatering = () => {
           <section className="div-izq">
             <section className="section-p-lateralesHome">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                ac quam a urna tincidunt faucibus. Sed venenatis magna vel risus
-                cursus tincidunt.
+                Nuestro servicio de catering abarca una amplia variedad de
+                menús, adaptados a requerimientos nutricionales y tipos de
+                actividades desarrolladas.
               </p>
             </section>
             <section className="section-svg">

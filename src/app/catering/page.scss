@@ -22,3 +22,14 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .video-cat {
+    display: none;
+  }
+  .hero-cont {
+    height: 30vh;
+    background: url("/images/catBanner.jpg") center;
+    background-size: cover;
+  }
+}
