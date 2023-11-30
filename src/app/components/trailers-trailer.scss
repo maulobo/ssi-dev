@@ -36,6 +36,12 @@
     }
   }
 }
+.trailer-h2 {
+  text-align: center;
+  padding: 7% 8%;
+  font-size: clamp(2em, 2.5em, 3vw);
+  font-weight: 600;
+}
 .active {
   z-index: -1;
 }

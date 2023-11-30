@@ -8,8 +8,8 @@ const TrailersTrailer = () => {
   const [active, setActive] = useState(false);
   return (
     <div>
-      <div className="trailer-h2h2">
-        <h2>Modulo habitacional</h2>
+      <div className="trailer-h2">
+        <h2>Inspecciona nuestro modelo 3D</h2>
       </div>
       {/* <Image src={interiorok} /> */}
       <div className="trailer-container">

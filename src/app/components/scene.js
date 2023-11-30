@@ -9,13 +9,13 @@ const Scene = () => {
     <Canvas
       shadows
       camera={{
-        fov: 100,
-        position: [2, 2, 3],
+        fov: 10,
+        position: [20, 10, 43],
       }}
     >
       <Model />
-      <Environment preset="apartment" />
-      <ambientLight intensity={1} color={"#222"} />
+      <Environment preset="sunset" />
+      <ambientLight intensity={0.5} color={"#0461ec"} />
       <pointLight position={[0, 0, 15]} color={"#555"} />
     </Canvas>
   );
