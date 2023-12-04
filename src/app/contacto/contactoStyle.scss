@@ -1,7 +1,7 @@
 @import "../globals.scss";
 .contacto-fondo {
   position: relative;
-  background-color: $colorBlanco;
+  background-color: #8f949c;
   height: 100vh;
   overflow: hidden;
   padding: 10% 20%;
@@ -62,7 +62,7 @@
   }
 }
 .infoContacto-box {
-  background-color: $colorRojo;
+  background-color: $colorNegro;
   position: absolute;
   border-radius: 20px;
   z-index: 1;

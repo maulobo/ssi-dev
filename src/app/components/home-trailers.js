@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import "./home-catering.scss";
-import img from "/public/images/trailerpic.jpg";
+import img from "/public/images/bannerTrailerHome.jpg";
 
 const HomeTrailers = () => {
   return (
