@@ -17,66 +17,61 @@ const Empresa = () => {
   const mapRef = useRef(null);
   const accRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: contenedorRef.current,
-        start: "center bottom",
-      },
-    });
-    tl.from(titleRef.current, {
-      opacity: 0,
-      x: 300,
-    })
-      .from(pRef.current, {
-        opacity: 0,
-        x: 300,
-      })
-      .from(mapRef.current, {
-        opacity: 0,
-      })
-      .from(accRef.current, {
-        opacity: 0,
-      });
+  // gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: contenedorRef.current,
+  //       start: "center bottom",
+  //     },
+  //   });
+  //   tl.from(titleRef.current, {
+  //     opacity: 0,
+  //     x: 300,
+  //   })
+  //     .from(pRef.current, {
+  //       opacity: 0,
+  //       x: 300,
+  //     })
+  //     .from(mapRef.current, {
+  //       opacity: 0,
+  //     })
+  //     .from(accRef.current, {
+  //       opacity: 0,
+  //     });
 
-    return () => {
-      tl.kill();
-    };
-  }, []);
+  //   return () => {
+  //     tl.kill();
+  //   };
+  // }, []);
 
   return (
-    <div ref={contenedorRef} className="contenedor">
-      <span ref={mapRef}>
-        <SvgMap />
-      </span>
-      <div>
-        <div className="first">
-          <div ref={titleRef}>
-            <h2>NUESTRA</h2>
-            <h2>EMPRESA</h2>
-          </div>
-          <p ref={pRef} className="text-empresa">
-            Somos una compañía de servicios generales con perso- nal capacitado
-            siempre a la altura de las circunstan- cias que se presentan.
-            Nuestra visión es ampliar la capacidad y experiencia para garantizar
-            la satisfacción del cliente y de nues- tras tareas en los servicios
-            actuales y los que se aveci- nen a futuro. Nos basamos en tres
-            pilares fundamentales: respues- ta inmediata, profesionalismo y
-            flexibilidad para ofre- cer un servicio confiable, seguro y de
-            calidad acorde a los estándares y legislaciones vigentes.
-          </p>
+    <div ref={contenedorRef} className="empresa-contenedor">
+      <div className="empresa-first">
+        <div className="" ref={titleRef}>
+          <h2>NUESTRA</h2>
+          <h2>EMPRESA</h2>
         </div>
+        <p ref={pRef} className="">
+          Somos una compañía de servicios generales con personal capacitado
+          siempre a la altura de las circunstancias que se presentan. Nuestra
+          visión es ampliar la capacidad y experiencia para garantizar la
+          satisfacción del cliente y de nuestras tareas en los servicios
+          actuales y los que se avecinen a futuro. Nos basamos en tres pilares
+          fundamentales: respuesta inmediata, profesionalismo y flexibilidad
+          para ofrecer un servicio confiable, seguro y de calidad acorde a los
+          estándares y legislaciones vigentes.
+        </p>
       </div>
-      <div>
-        <div className="second">
-          <section ref={accRef} className="second-section1">
-            <NextUIProvider>
-              <AccordionMio />
-            </NextUIProvider>
-          </section>
-          <section className="second-section2"></section>
-        </div>
+      <div className="empresa-second">
+        <section ref={accRef} className="empresa-second-section">
+          <NextUIProvider>
+            <AccordionMio />
+          </NextUIProvider>
+        </section>
+        <section className="empresa-second-svg">
+          <SvgMap />
+        </section>
       </div>
     </div>
   );

@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/all";
 
 const SvgMap = () => {
   const contRef = useRef(null);
-  const lineaRef = useRef(null);
   const circleRef = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -17,23 +16,13 @@ const SvgMap = () => {
         end: "bottom center",
       },
     });
-    tl.fromTo(
-      circleRef.current,
-      {
-        scale: 0.5,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-      }
-    );
   }, []);
 
   return (
     <div ref={contRef} className="svg-div-container">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1080 1550"
+        viewBox="10 0 1600 2000"
         className="svg-container"
       >
         <g id="Capa_1" data-name="Capa 1">

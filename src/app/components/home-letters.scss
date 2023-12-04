@@ -1,7 +1,7 @@
 @import "../globals.scss";
 
 .letters-container {
-  margin: 4rem 0;
+  margin: 7rem 0;
   background-color: $colorNegro;
   color: $colorBlanco;
   display: flex;
@@ -13,6 +13,8 @@
     margin: 0;
     font-size: $fuenteDesplaz;
     white-space: nowrap;
+    font-weight: 100;
     text-align: center;
+    letter-spacing: 10px;
   }
 }

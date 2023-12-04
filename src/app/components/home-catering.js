@@ -9,6 +9,7 @@ import svg3 from "/public/images/svg/ensalada.svg";
 import svg4 from "/public/images/svg/palcotita.svg";
 import svg5 from "/public/images/svg/pimiento.svg";
 import svg6 from "/public/images/svg/tomatiro.svg";
+import { Button } from "@nextui-org/react";
 
 const HomeCatering = () => {
   return (
@@ -40,6 +41,9 @@ const HomeCatering = () => {
             alt="Imagen de catering"
             className="img-home-laterales"
           />
+          <button color="primary" variant="bordered" className="buton-buton">
+            VER MAS
+          </button>
         </div>
       </div>
     </>

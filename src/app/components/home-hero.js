@@ -12,11 +12,12 @@ const HomeHero = () => {
       <div className="video-hero-container">
         <div className="contenido">
           <motion.div style={{ y }}>
-            <Image src={mygif} className="gif" />
+            <Image src={mygif} className="gif" alt="gif" />
           </motion.div>
           <video
             src="/video/Home.mp4"
             autoPlay
+            loop
             muted
             className="background-video"
             poster="/public/images/catering.jpg"

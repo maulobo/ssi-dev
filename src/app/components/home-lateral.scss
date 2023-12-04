@@ -1,5 +1,7 @@
+@import "../globals.scss";
 .scroll-section-outer {
   overflow: hidden;
+  font-size: $fuenteTexto;
 }
 
 .scroll-section-inner {

@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import "./home-catering.scss";
+import "./home-trailers.scss";
 import img from "/public/images/bannerTrailerHome.jpg";
+import trailer1 from "/public/images/trailer-uno.png";
+import trailer2 from "/public/images/trailer-dos.png";
 
 const HomeTrailers = () => {
   return (
@@ -19,7 +21,10 @@ const HomeTrailers = () => {
                 convencionales.
               </p>
             </section>
-            <section className="section-svg"> aca va un svg</section>
+            <section className="section-svg">
+              <Image src={trailer1} alt="trailer1" className="" />
+              <Image src={trailer2} alt="trailer2" className="" />
+            </section>
           </section>
         </div>
         <div className="mitad-der-home">

@@ -1,19 +1,12 @@
 import React from "react";
-
 import "./home-empresa.scss";
 
 const HomeServicios = () => {
   return (
-    <div className="contenedor2">
+    <div className="home-servicios-contenedor2">
       <div>
-        <aside className="firstNuestros">
-          <h2 className="nuestros-h2">NUESTROS SERVICIOS</h2>
-          <p className="nuestros-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum
-            accusamus fugiat unde expedita iusto natus odio distinctio molestias
-            quo asperiores, aliquid facilis voluptatibus iure, modi a alias
-            magni voluptates?
-          </p>
+        <aside className="home-servicios-first">
+          <h2 className="home-nuestros-h2">NUESTROS SERVICIOS</h2>
         </aside>
       </div>
     </div>
