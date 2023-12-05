@@ -41,10 +41,8 @@ const HomeCatering = () => {
             alt="Imagen de catering"
             className="img-home-laterales"
           />
-          <button color="primary" variant="bordered" className="buton-buton">
-            VER MAS
-          </button>
         </div>
+        <button className="buton-buton">VER MAS</button>
       </div>
     </>
   );

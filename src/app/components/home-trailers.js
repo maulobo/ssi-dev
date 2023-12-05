@@ -30,6 +30,7 @@ const HomeTrailers = () => {
         <div className="mitad-der-home">
           <Image src={img} alt="campamento" className="img-home-laterales" />
         </div>
+        <button className="buton-buton">VER MAS</button>
       </div>
     </>
   );

@@ -14,12 +14,10 @@ const HomeTransporte = () => {
           <section className="div-izq">
             <section className="section-p-lateralesHome">
               <p>
-                Nuestra experiencia en Campamentos Integrales llave en mano es
-                muy extensa. Ofrecemos transporte, montaje de obras Civiles,
-                muebles y útiles de oficinas, mantenimiento general,
-                administración, provisión de energía, agua, combustible,
-                vigilancia, alimentación del personal y limpieza, lavandería,
-                hotelería.
+                Ofrecemos transporte, montaje de obras Civiles, muebles y útiles
+                de oficinas, mantenimiento general, administración, provisión de
+                energía, agua, combustible, vigilancia, alimentación del
+                personal y limpieza, lavandería, hotelería.
               </p>
             </section>
             <section className="transporte-section-svg">
@@ -30,6 +28,7 @@ const HomeTransporte = () => {
         <div className="mitad-der-home">
           <Image src={img} alt="campamento" className="img-home-laterales" />
         </div>
+        <button className="buton-buton">VER MAS</button>
       </div>
     </>
   );
