@@ -42,15 +42,15 @@ const Appears = ({ title = "", phrase }) => {
         scrollTrigger: {
           trigger: container.current,
           start: "top center-=150px",
-          end: `center center`,
-          scrub: 1,
+          end: `bottom top`,
+          scrub: 4,
         },
       });
 
       tl.to(refs.current, {
         opacity: 1,
         ease: "none",
-        stagger: 0.1,
+        stagger: 1,
       });
 
       return () => {
