@@ -21,9 +21,9 @@ const HomeTrailers = () => {
                 convencionales.
               </p>
             </section>
-            <section className="section-svg">
-              <Image src={trailer1} alt="trailer1" className="" />
-              <Image src={trailer2} alt="trailer2" className="" />
+            <section className="trailers-section-svg">
+              <Image src={trailer1} alt="trailer1" />
+              <Image src={trailer2} alt="trailer2" />
             </section>
           </section>
         </div>

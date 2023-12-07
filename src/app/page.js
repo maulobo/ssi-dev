@@ -10,6 +10,7 @@ import Lateral from "./components/home-lateral";
 
 import Clientes from "./components/home-clientes";
 import Contact from "./components/home-contact";
+import WhatsAppIcon from "./components/Whats";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -38,6 +39,7 @@ export default function Home() {
           <Lateral />
           <Clientes />
           <Contact />
+          <WhatsAppIcon />
         </div>
       )}
     </main>
