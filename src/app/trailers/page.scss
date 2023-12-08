@@ -22,9 +22,9 @@
 .cont-3d {
   padding: $paddingconTop;
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .video-trailer {
-    display: none;
+    display: none !important;
   }
   .cont-hero-trailer {
     height: 30vh;
