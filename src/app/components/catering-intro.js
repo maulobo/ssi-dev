@@ -9,7 +9,7 @@ import svg6 from "/public/images/svg/fruta4.svg";
 
 const CateringIntro = () => {
   return (
-    <div className="intro-container">
+    <div className="intro-container" style={{ backgroundColor: "aqua" }}>
       <section className="intro-frutas">
         <Image src={svg1} alt="unafrutita" />
         <Image src={svg6} alt="laranja" />
