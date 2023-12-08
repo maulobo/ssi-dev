@@ -4,6 +4,13 @@
 }
 .hero-cont {
   position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+.video-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .cateringsvg-container {
   background-color: $colorBlanco;
@@ -24,13 +31,8 @@
 }
 
 @media (max-width: 600px) {
-  .video-back {
-    display: none;
-  }
   .hero-cont {
     overflow: hidden;
     height: 30vh;
-    background: url("/images/catBanner.jpg") center;
-    background-size: cover;
   }
 }
