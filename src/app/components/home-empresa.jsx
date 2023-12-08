@@ -17,38 +17,10 @@ const Empresa = () => {
   const mapRef = useRef(null);
   const accRef = useRef(null);
 
-  // gsap.registerPlugin(ScrollTrigger);
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: contenedorRef.current,
-  //       start: "center bottom",
-  //     },
-  //   });
-  //   tl.from(titleRef.current, {
-  //     opacity: 0,
-  //     x: 300,
-  //   })
-  //     .from(pRef.current, {
-  //       opacity: 0,
-  //       x: 300,
-  //     })
-  //     .from(mapRef.current, {
-  //       opacity: 0,
-  //     })
-  //     .from(accRef.current, {
-  //       opacity: 0,
-  //     });
-
-  //   return () => {
-  //     tl.kill();
-  //   };
-  // }, []);
-
   return (
     <div ref={contenedorRef} className="empresa-contenedor">
       <div className="empresa-first">
-        <div className="" ref={titleRef}>
+        <div className="nuestra_h2" ref={titleRef}>
           <h2>NUESTRA</h2>
           <h2>EMPRESA</h2>
         </div>

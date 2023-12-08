@@ -9,6 +9,12 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  @media (max-width: 800px) {
+    margin: 5rem 0;
+  }
+  @media (max-width: 500px) {
+    margin: 3.5rem 0;
+  }
   h2 {
     margin: 0;
     font-size: $fuenteDesplaz;

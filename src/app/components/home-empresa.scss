@@ -7,6 +7,12 @@
   flex-direction: column;
   gap: 3rem;
 }
+.nuestra_h2 {
+  padding-bottom: 3rem;
+  @media (max-width: 500px) {
+    padding-bottom: 1.5rem;
+  }
+}
 
 .empresa-first {
   flex: 1;
@@ -15,6 +21,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  @media (max-width: 500px) {
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+  }
   h2 {
     font-size: $fuenteSubtitulos;
   }
