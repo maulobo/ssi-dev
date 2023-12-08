@@ -24,10 +24,11 @@
 }
 
 @media (max-width: 600px) {
-  .video-cat {
+  .video-back {
     display: none;
   }
   .hero-cont {
+    overflow: hidden;
     height: 30vh;
     background: url("/images/catBanner.jpg") center;
     background-size: cover;
