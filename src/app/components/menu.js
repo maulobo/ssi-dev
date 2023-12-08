@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import "./menu-estilos.scss";

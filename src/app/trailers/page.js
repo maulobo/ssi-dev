@@ -14,22 +14,6 @@ const phrase1 =
 const phrase2 =
   "A pesar de su tamaño compacto, muchas viviendas en remolques están equipadas con comodidades modernas como cocinas, baños y sistemas de entretenimiento.";
 
-export function Loader() {
-  return (
-    <div className="flex h-screen w-screen items-center justify-center ">
-      <CircularProgress
-        size="lg"
-        classNames={{
-          svg: " h-44 ",
-          svgWrapper: "h-44",
-        }}
-        color="default"
-        aria-label="Loading..."
-      />
-    </div>
-  );
-}
-
 const Page = () => {
   return (
     <>
