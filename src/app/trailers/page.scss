@@ -14,21 +14,29 @@
 }
 .cont-hero-trailer {
   position: relative;
-  height: auto;
+  width: 100vw;
+  overflow: hidden;
   .trailer-hero-title {
     @include heroPages;
   }
+}
+.contenedor-transportable {
+  width: 100vw;
+  overflow: hidden;
+}
+.video-trailer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .cont-3d {
   padding: $paddingconTop;
 }
 @media (max-width: 600px) {
-  .video-trailer {
-    display: none !important;
-  }
   .cont-hero-trailer {
     height: 30vh;
-    background: url("/images/bannerTrailer.jpeg") center;
-    background-size: cover;
+  }
+  .contenedor-transportable {
+    height: 30vh;
   }
 }

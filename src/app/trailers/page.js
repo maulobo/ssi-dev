@@ -36,7 +36,9 @@ const Page = () => {
       <main className="trailers-container">
         <HeroTrailers />
         <Appears phrase={phrase1} title="Rápida construcción" />
-        <Transportables />
+        <section className="contenedor-transportable">
+          <Transportables />
+        </section>
         <Appears phrase={phrase2} />
         <TrailerBlack />
         <TrailersTrailer />

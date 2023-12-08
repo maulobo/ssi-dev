@@ -1,16 +1,17 @@
 @import "../globals.scss";
 .imageClass {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   height: 100vh;
+  width: 100vw;
   background-color: transparent;
+  overflow: hidden;
   @media (max-width: 900px) {
     height: 70vh;
   }
   .videoAcordion {
-    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -23,6 +24,7 @@
   }
 }
 .acordion {
+  position: absolute;
   width: 40%;
   z-index: 9;
   @media (max-width: 900px) {
@@ -40,6 +42,7 @@
 @media (max-width: 768px) {
   .imageClass {
     background-color: black;
+    overflow: hidden;
   }
 }
 .p-font {

@@ -4,7 +4,7 @@ import "../trailers/page.scss";
 const Transportables = () => {
   return (
     <>
-      <video autoPlay loop muted className="video">
+      <video autoPlay loop muted className="video-trailer">
         <source src="/video/trailerLoop.mp4" type="video/mp4" />
       </video>
     </>
