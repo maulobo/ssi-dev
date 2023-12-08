@@ -15,7 +15,7 @@ const HomeHero = () => {
             <Image src={mygif} className="gif" alt="gif" />
           </motion.div>
           <video
-            autoPlay={false}
+            autoPlay
             loop
             muted
             playsInline
