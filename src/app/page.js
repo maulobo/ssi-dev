@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import Empresa from "./components/home-empresa";
 
 import Letters from "./components/home-letters";

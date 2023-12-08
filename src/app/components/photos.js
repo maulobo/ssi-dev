@@ -4,14 +4,14 @@ const unsplashLink = (id, width, height) => `/images/cat${id}.jpg`;
 
 const unsplashPhotos = [
   { id: 1, width: 1080, height: 800 },
-  { id: 2, width: 1080, height: 900 },
-  { id: 3, width: 1080, height: 800 },
+  { id: 2, width: 920, height: 700 },
+  { id: 3, width: 920, height: 800 },
   { id: 4, width: 1080, height: 750 },
   { id: 5, width: 1080, height: 500 },
   { id: 6, width: 1080, height: 607 },
   { id: 1, width: 1080, height: 800 },
-  { id: 2, width: 1080, height: 900 },
-  { id: 3, width: 1080, height: 800 },
+  { id: 2, width: 920, height: 700 },
+  { id: 3, width: 920, height: 800 },
   { id: 4, width: 1080, height: 750 },
   { id: 5, width: 1080, height: 500 },
   { id: 6, width: 1080, height: 607 },
