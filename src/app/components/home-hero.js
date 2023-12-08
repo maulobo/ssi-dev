@@ -15,13 +15,15 @@ const HomeHero = () => {
             <Image src={mygif} className="gif" alt="gif" />
           </motion.div>
           <video
-            src="/video/Home.mp4"
-            autoPlay
+            autoPlay={false}
             loop
             muted
+            playsInline
             className="background-video"
-            poster="/public/images/catering.jpg"
-          />
+            poster="/images/transporte.jpeg"
+          >
+            <source src="/video/Home.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </>
