@@ -25,7 +25,7 @@ const Page = () => {
         </section>
         <Appears phrase={phrase2} />
         <TrailerBlack />
-        <TrailersTrailer />
+        {/* <TrailersTrailer /> */}
         {/* <section className="cont-3d"></section> */}
         <Footer />
       </main>
