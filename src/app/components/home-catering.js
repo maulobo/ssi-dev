@@ -15,16 +15,17 @@ const HomeCatering = () => {
   return (
     <>
       <div className="home-contenedor-catering">
-        <h2 className="h2-laterales">CATERING EXCLUSIVO</h2>
-        <div className="mitad-izq">
-          <section className="div-izq">
-            <section className="section-p-lateralesHome">
+        <h2 className="h2-laterales-cat">CATERING EXCLUSIVO</h2>
+        <div className="mitad-izq-cat">
+          <section className="div-izq-cat">
+            <section className="section-p-lateralesHome-cat">
               <p>
                 Nuestro servicio de catering abarca una amplia variedad de
                 menús, adaptados a requerimientos nutricionales y tipos de
                 actividades desarrolladas.
               </p>
             </section>
+            <button className="buton-lateral visualizacion">VER MAS</button>
             <section className="section-svg">
               <Image src={svg1} alt="unafrutita" className="uno" />
               <Image src={svg2} alt="picante" className="dos" />
@@ -35,14 +36,9 @@ const HomeCatering = () => {
             </section>
           </section>
         </div>
-        <div className="mitad-der-home">
-          <Image
-            src={img}
-            alt="Imagen de catering"
-            className="img-home-laterales"
-          />
+        <div className="mitad-der-home-cat">
+          <button className="buton-lateral">VER MAS</button>
         </div>
-        <button className="buton-buton">VER MAS</button>
       </div>
     </>
   );

@@ -9,7 +9,7 @@ const TrailersTrailer = () => {
   return (
     <div>
       <div className="trailer-h2">
-        <h2>Inspecciona nuestro modelo 3D</h2>
+        <h2>Descubre cada detalle de nuestro módulo habitacional</h2>
       </div>
 
       <div className="trailer-container">

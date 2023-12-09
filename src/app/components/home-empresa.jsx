@@ -3,9 +3,8 @@ import "./home-empresa.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { NextUIProvider } from "@nextui-org/react";
 import AccordionMio from "./home-accordion";
-import SvgMap from "./home-svgMap";
-import { ScrollTrigger } from "gsap/all";
-import gsap from "gsap";
+import Image from "next/image";
+import neuquenMapa from "/public/images/pngNeuquen.png";
 
 const Empresa = () => {
   let { scrollYProgress } = useScroll();
@@ -42,7 +41,7 @@ const Empresa = () => {
           </NextUIProvider>
         </section>
         <section className="empresa-second-svg">
-          <SvgMap />
+          <Image src={neuquenMapa} alt="Mapa" className="mapita" />
         </section>
       </div>
     </div>

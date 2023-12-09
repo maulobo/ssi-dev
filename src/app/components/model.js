@@ -7,13 +7,16 @@ export function Model(props) {
   return (
     <group position={modelPosition} {...props} dispose={null}>
       <mesh
+        name="baldosa de piso"
         castShadow
         receiveShadow
         geometry={nodes.Cube.geometry}
         material={nodes.Cube.material}
         position={[0, 0.133, -0.021]}
         scale={[6, 0.059, 1.648]}
-      />
+      >
+        <meshBasicMaterial color={"#8a7339"} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
@@ -22,7 +25,9 @@ export function Model(props) {
         position={[0, 1.39, -1.583]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[6, 0.059, 1.201]}
-      />
+      >
+        <meshBasicMaterial color={"#8a7339"} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
