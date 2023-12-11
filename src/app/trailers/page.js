@@ -26,7 +26,6 @@ const Page = () => {
         <Appears phrase={phrase2} />
         <TrailerBlack />
         <TrailersTrailer />
-
         <Footer />
       </main>
     </>

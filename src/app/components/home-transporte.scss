@@ -1,72 +1,62 @@
 @import "../globals.scss";
 
-.home-contenedor-catering {
-  position: relative;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: $colorNegro;
-  .h2-laterales {
-    line-height: 1;
-    top: 10%;
-    position: absolute;
-    z-index: 1;
-    font-size: $fuenteSubtitulos;
-    text-align: center;
-    color: $colorBlanco;
+.home-contenedor-base {
+  @include lateralMain;
+  .h2-laterales-base {
+    @include h2-Laterales;
   }
   > div {
     min-width: 300px;
   }
 }
-
-.mitad-der-home {
-  position: relative;
+.mitad-der-home-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   flex: 1;
-  overflow: hidden;
+  background: url("/images/campamentoInt.jpg") no-repeat center/cover;
+  @media (max-width: 750px) {
+    display: none;
+  }
 }
 
-.buton-buton {
-  position: absolute;
-  top: 80%;
-  left: 70%;
-  border: solid 1px #fff;
-  border-radius: 10px;
-  color: $colorBlanco;
-  padding: 1rem;
+.buton-lateral-base {
+  @include btnLateral;
+}
+.visualizacion-base {
+  display: none;
+  @media (max-width: 750px) {
+    display: inline;
+    margin: 5% 8% 0% 8%;
+    align-self: flex-end;
+  }
 }
 
 /* Estilo para el lado izq */
 
-.mitad-izq {
-  flex: 1;
-  color: white;
-  display: flex;
+.mitad-izq-base {
+  @include mitadIzq("/images/campamentoInt.jpg", 30vh, 20vh, 0);
+  padding-top: 0;
+  @media (max-width: 750px) {
+    padding-top: 20vh;
+  }
+  @media (max-width: 500px) {
+    padding-top: 30vh;
+  }
+  //-----para ancho y alto----------//
+  @media screen and (max-width: 700px) and (max-height: 700px) {
+    padding-top: 40vh;
+  }
 }
-.div-izq {
-  height: 100vh;
+.div-izq-base {
   display: flex;
   flex-direction: column;
 }
 
-.img-home-laterales {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.section-p-lateralesHome {
-  flex: 1;
-  display: flex;
-  text-align: end;
-  align-items: flex-end;
-  overflow-y: hidden;
-  padding: $paddingBodyCenterLaterales;
+.section-p-lateralesHome-base {
+  @include parrafo-lateral;
 }
 
 .transporte-section-svg {
@@ -77,44 +67,17 @@
   justify-content: center;
   flex-wrap: wrap;
   transition: all ease 3s;
-  padding: 4% 0;
-  > img {
-    width: 45%;
-    z-index: 1;
-  }
-}
-@media (max-width: 750px) {
-  .home-contenedor-catering {
-    background-color: transparent;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    .h2-laterales {
-      text-align: end;
-      right: 14%;
-      top: 20%;
-      font-size: $fuenteSubtMayusRESIZE;
-    }
-  }
+  padding: 10% 0 0 0;
 
-  .mitad-izq {
-    padding: $paddingBodyCenter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 64%;
-  }
-  .section-p-lateralesHome {
-    flex: none;
-  }
-  .mitad-der-home {
-    position: absolute;
-    z-index: -1;
-  }
-}
-@media (max-width: 450px) {
-  .h2-laterales {
-    right: 5% !important;
+  > img {
+    height: 40vh;
+    z-index: 1;
+    object-fit: contain;
+    @media (max-width: 1050px) {
+      height: 35vh;
+    }
+    @media (max-width: 850px) {
+      height: 30vh;
+    }
   }
 }

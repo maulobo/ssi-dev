@@ -10,7 +10,7 @@ const Scene = () => {
       shadows
       camera={{
         fov: 10,
-        position: [20, 10, 43],
+        position: [40, 20, 33],
       }}
     >
       <Model />

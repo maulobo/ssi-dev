@@ -8,11 +8,11 @@ import base from "/public/images/base-integral.png";
 const HomeTransporte = () => {
   return (
     <>
-      <div className="home-contenedor-catering">
-        <h2 className="h2-laterales">BASE INTEGRAL</h2>
-        <div className="mitad-izq">
-          <section className="div-izq">
-            <section className="section-p-lateralesHome">
+      <div className="home-contenedor-base">
+        <h2 className="h2-laterales-base">BASE INTEGRAL</h2>
+        <div className="mitad-izq-base">
+          <section className="div-izq-base">
+            <section className="section-p-lateralesHome-base">
               <p>
                 Ofrecemos transporte, montaje de obras Civiles, muebles y útiles
                 de oficinas, mantenimiento general, administración, provisión de
@@ -20,15 +20,17 @@ const HomeTransporte = () => {
                 personal y limpieza, lavandería, hotelería.
               </p>
             </section>
+            <button className="buton-lateral-base visualizacion-base">
+              VER MAS
+            </button>
             <section className="transporte-section-svg">
               <Image src={base} alt="base" className="" />
             </section>
           </section>
         </div>
-        <div className="mitad-der-home">
-          <Image src={img} alt="campamento" className="img-home-laterales" />
+        <div className="mitad-der-home-base">
+          <button className="buton-lateral-base">VER MAS</button>
         </div>
-        <button className="buton-buton">VER MAS</button>
       </div>
     </>
   );

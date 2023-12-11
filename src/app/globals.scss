@@ -139,3 +139,70 @@ h2 {
 body {
   background-color: $colorNegro;
 }
+//---------Laterales-------------//
+@mixin lateralMain {
+  position: relative;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $colorNegro;
+  @media (max-width: 750px) {
+    background-color: transparent;
+  }
+}
+@mixin h2-Laterales {
+  line-height: 1;
+  top: 10%;
+  position: absolute;
+  z-index: 1;
+  font-size: $fuenteSubtitulos;
+  text-align: center;
+  color: $colorBlanco;
+  @media (max-width: 750px) {
+    text-align: end;
+    right: 12%;
+    top: 15%;
+    font-size: $fuenteSubtMayusRESIZE;
+  }
+  @media (max-width: 450px) {
+    right: 10%;
+  }
+}
+@mixin btnLateral {
+  border: solid 3px #fff;
+  border-radius: 10px;
+  color: $colorBlanco;
+  padding: 1rem 2rem;
+}
+@mixin mitadIzq($imagenFondo, $margen-A, $margen-B, $margen-C) {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: $margen-A;
+  @media (max-width: 900px) {
+    margin-top: $margen-B;
+  }
+  @media (max-width: 750px) {
+    background: url($imagenFondo) no-repeat center/cover;
+    padding: 0 5% 0 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: $margen-C;
+    height: 100%;
+  }
+}
+@mixin parrafo-lateral {
+  flex: 1;
+  display: flex;
+  text-align: end;
+  align-items: flex-end;
+  padding: $paddingBodyCenterLaterales;
+}
