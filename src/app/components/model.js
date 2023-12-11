@@ -574,8 +574,8 @@ export function Model(props) {
       />
       <OrbitControls
         maxPolarAngle={Math.PI / 2}
-        maxDistance={50}
-        minDistance={1}
+        maxDistance={100}
+        minDistance={15}
       />
     </group>
   );

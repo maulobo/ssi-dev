@@ -19,7 +19,7 @@ const HeroTrailers = () => {
         <h2>de construcción</h2>
       </div>
       <video autoPlay loop muted playsInline className="video-trailer">
-        <source src="/video/herotrailer.mp4" type="video/mp4" />
+        <source src="/video/trailerBanner.mp4" type="video/mp4" />
       </video>
     </div>
   );
