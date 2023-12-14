@@ -5,6 +5,7 @@ import "./home-trailers.scss";
 
 import trailer1 from "/public/images/trailer-uno.png";
 import trailer2 from "/public/images/trailer-dos.png";
+import Link from "next/link";
 
 const HomeTrailers = () => {
   return (
@@ -21,7 +22,9 @@ const HomeTrailers = () => {
                 convencionales.
               </p>
             </section>
-            <button className="buton-modulo visualizacion">VER MAS</button>
+            <Link href={"/trailers"} className="buton-modulo visualizacion">
+              VER MAS
+            </Link>
             <section className="trailers-section-svg">
               <Image src={trailer1} alt="trailer1" />
               <Image src={trailer2} alt="trailer2" />
@@ -29,7 +32,9 @@ const HomeTrailers = () => {
           </section>
         </div>
         <div className="mitad-der-home-modulo">
-          <button className="buton-modulo">VER MAS</button>
+          <Link href={"/trailers"} className="buton-modulo">
+            VER MAS
+          </Link>
         </div>
       </div>
     </>

@@ -14,14 +14,7 @@ const HomeHero = () => {
           <motion.div style={{ y }}>
             <Image src={mygif} className="gif" alt="gif" />
           </motion.div>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="background-video"
-            poster="/images/transporte.jpeg"
-          >
+          <video autoPlay loop muted playsInline className="background-video">
             <source src="/video/Home.mp4" type="video/mp4" />
           </video>
         </div>

@@ -13,7 +13,7 @@ import Contact from "./components/home-contact";
 import WhatsAppIcon from "./components/Whats";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [timeline, setTimeline] = useState(null);
 
   useLayoutEffect(() => {

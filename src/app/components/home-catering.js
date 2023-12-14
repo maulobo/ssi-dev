@@ -10,6 +10,7 @@ import svg4 from "/public/images/svg/palcotita.svg";
 import svg5 from "/public/images/svg/pimiento.svg";
 import svg6 from "/public/images/svg/tomatiro.svg";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 const HomeCatering = () => {
   return (
@@ -25,7 +26,9 @@ const HomeCatering = () => {
                 actividades desarrolladas.
               </p>
             </section>
-            <button className="buton-lateral visualizacion">VER MAS</button>
+            <Link href={"/catering"} className="buton-lateral visualizacion">
+              VER MAS
+            </Link>
             <section className="section-svg">
               <Image src={svg1} alt="unafrutita" className="uno" />
               <Image src={svg2} alt="picante" className="dos" />
@@ -37,7 +40,9 @@ const HomeCatering = () => {
           </section>
         </div>
         <div className="mitad-der-home-cat">
-          <button className="buton-lateral">VER MAS</button>
+          <Link className="buton-lateral" href={"/catering"}>
+            VER MAS
+          </Link>
         </div>
       </div>
     </>
