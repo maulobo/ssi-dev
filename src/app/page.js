@@ -11,9 +11,10 @@ import Lateral from "./components/home-lateral";
 import Clientes from "./components/home-clientes";
 import Contact from "./components/home-contact";
 import WhatsAppIcon from "./components/Whats";
+import Wraper from "./components/lenis";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [timeline, setTimeline] = useState(null);
 
   useLayoutEffect(() => {
@@ -28,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <Wraper>
       {loading ? (
         <Loader timeline={timeline} />
       ) : (
@@ -42,6 +43,6 @@ export default function Home() {
           <WhatsAppIcon />
         </div>
       )}
-    </main>
+    </Wraper>
   );
 }
