@@ -27,8 +27,8 @@ const Lateral = () => {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "2000 top-=10000",
-          scrub: 1.4,
+          end: "2000 top-=5000",
+          scrub: 1,
           pin: true,
         },
       }
