@@ -4,7 +4,6 @@ import Appears from "../components/trailers-lettersAppears";
 import "./page.scss";
 import HeroTrailers from "../components/trailers-hero";
 import TrailerBlack from "../components/trailers-black";
-import { CircularProgress } from "@nextui-org/react";
 import Transportables from "../components/trailers-transportables";
 import TrailersTrailer from "../components/trailers-trailer";
 import Footer from "../components/footer";

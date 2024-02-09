@@ -13,7 +13,6 @@ const Empresa = () => {
   const contenedorRef = useRef(null);
   const titleRef = useRef(null);
   const pRef = useRef(null);
-  const mapRef = useRef(null);
   const accRef = useRef(null);
 
   return (
@@ -23,7 +22,7 @@ const Empresa = () => {
           <h2>NUESTRA</h2>
           <h2>EMPRESA</h2>
         </div>
-        <p ref={pRef} className="">
+        <p ref={pRef}>
           Somos una compañía de servicios generales con personal capacitado
           siempre a la altura de las circunstancias que se presentan. Nuestra
           visión es ampliar la capacidad y experiencia para garantizar la

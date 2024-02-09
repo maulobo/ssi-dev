@@ -20,6 +20,27 @@
     @include heroPages;
   }
 }
+.cont-hero-class {
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+  transition: all 0.5s;
+}
+.cont-hero-class:hover {
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
 .contenedor-transportable {
   width: 100vw;
   overflow: hidden;
