@@ -1,7 +1,12 @@
 import { useState } from "react";
-//import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 export function useForm(initialForm, validateForm) {
+  //servicio de emailjs
+  const service = "service_7qyr329";
+  const templateId = "template_g14xlbl";
+  const key = "OWg5M638v8inPBTaI";
+
   const [form, setForm] = useState(initialForm);
   const [error, setError] = useState({});
   const [response, setResponse] = useState(false);
@@ -24,10 +29,10 @@ export function useForm(initialForm, validateForm) {
 
     if (Object.keys(error).length === 0) {
       setResponse(true);
+      emailjs.sendForm(service, templateId, e.target, key);
       setForm(initialForm);
-
       setTimeout(() => setResponse(false), 10000);
-      //emailJS
+
       console.log(form);
     } else {
       return;
