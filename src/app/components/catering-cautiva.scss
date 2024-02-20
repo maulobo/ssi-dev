@@ -14,7 +14,7 @@
     position: absolute;
     z-index: 1;
     font-size: $fuenteSubtitulosMayus;
-    text-align: end;
+    text-align: flex-end;
     color: $colorBlanco;
     max-width: 75%;
     @media (max-width: 950px) {

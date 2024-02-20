@@ -6,29 +6,35 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 const Footer = () => {
   return (
-    <div className="footer-container">
-      <div className="footer-div">
-        <div className="footer-div-box">
-          <h2>Contacto</h2>
-          <p className="p-footer">mail: ssi.web.nqn@gmail.com </p>
-          <p className="p-footer">telefono: </p>
-          <p className="p-footer">direccion: </p>
-          <p className="p-footer">mail: </p>
+    <div className="footer-max-container">
+      <div className="footer-container">
+        <div className="footer-div">
+          <div className="footer-div-box">
+            <h2>Contacto</h2>
+            <p className="p-footer">mail: ssi.web.nqn@gmail.com </p>
+            <p className="p-footer">telefono: </p>
+            <p className="p-footer">direccion: </p>
+            <p className="p-footer">mail: </p>
+          </div>
+          <div className="footer-div-box">
+            <h2>Redes</h2>
+            <IconContext.Provider value={{ size: "6em" }}>
+              <div className="footer-png">
+                <AiOutlineInstagram />
+                <AiFillFacebook />
+                <RiTwitterXFill />
+              </div>
+            </IconContext.Provider>
+          </div>
         </div>
-        <div className="footer-div-box">
-          <h2>Redes</h2>
-          <IconContext.Provider value={{ size: "6em" }}>
-            <div className="footer-png">
-              <AiOutlineInstagram />
-              <AiFillFacebook />
-              <RiTwitterXFill />
-            </div>
-          </IconContext.Provider>
+        <div className="footer-div footer-div-der">
+          <h2>SSI</h2>
         </div>
       </div>
-      <div className="footer-div footer-div-der">
-        <h2>SSI</h2>
-      </div>
+      <p className="footer-p-biult">
+        © Built with pride and caffeine by Anabel de Prado y Mauro Lobo. All
+        rights reserved.
+      </p>
     </div>
   );
 };
