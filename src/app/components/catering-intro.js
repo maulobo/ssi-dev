@@ -18,12 +18,13 @@ const CateringIntro = () => {
       </section>
       <section className="intro-p">
         <div className="intro-box">
-          <h2>Titulo</h2>
+          <h2>Nosotros</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-            tempora distinctio ad voluptatem assumenda vero. Assumenda,
-            sapiente. Impedit, quibusdam. Nostrum, beatae et voluptatum
-            quibusdam ullam dolorum ratione in maxime unde!
+            Nos dedicamos a proporcionar soluciones gastronómicas de alta
+            calidad para satisfacer las necesidades culinarias más exigentes.
+            Desde viandas saludables y equilibradas hasta eventos de gran
+            envergadura con una atención meticulosa a cada detalle, nuestro
+            compromiso con la excelencia se refleja en cada plato que servimos.
           </p>
         </div>
       </section>

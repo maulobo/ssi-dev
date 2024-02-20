@@ -11,10 +11,16 @@ const CateringCautiva = () => {
         <div className="mitad-izq-catering">
           <section className="section-p-cautiva">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-              quam a urna tincidunt faucibus. Sed venenatis magna vel risus
-              cursus tincidunt.Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
+              Nos distinguimos por nuestra dedicación a la calidad y la atención
+              al cliente. Trabajamos estrechamente con cada cliente para
+              entender sus necesidades específicas y garantizar que cada evento
+              sea único y exitoso. Desde la planificación inicial hasta la
+              ejecución impecable, nuestro equipo está comprometido a superar
+              las expectativas en cada paso del camino.
+            </p>
+            <p>
+              Ofrecemos una amplia gama de opciones culinarias, todas elaboradas
+              con ingredientes frescos y de primera calidad
             </p>
           </section>
         </div>

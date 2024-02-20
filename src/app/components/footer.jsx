@@ -10,12 +10,10 @@ const Footer = () => {
       <div className="footer-div">
         <div className="footer-div-box">
           <h2>Contacto</h2>
-          <p className="p-footer">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-            ut. Quasi, est. Laudantium provident inventore harum earum, quaerat
-            a unde perferendis? Ab beatae necessitatibus rerum rem nisi? Quae,
-            tempore expedita?
-          </p>
+          <p className="p-footer">mail: ssi.web.nqn@gmail.com </p>
+          <p className="p-footer">telefono: </p>
+          <p className="p-footer">direccion: </p>
+          <p className="p-footer">mail: </p>
         </div>
         <div className="footer-div-box">
           <h2>Redes</h2>
