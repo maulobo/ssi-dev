@@ -1,12 +1,9 @@
 import React, { forwardRef } from "react";
 import "./home-contact.scss";
-
 import { BsFacebook } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
-import face from "/public/images/face.png";
 import Form from "./home-form";
-import Image from "next/image";
 import { IconContext } from "react-icons";
 
 const Contact = forwardRef((props, ref) => {

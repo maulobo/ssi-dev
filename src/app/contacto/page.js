@@ -3,6 +3,7 @@ import React from "react";
 import "./contactoStyle.scss";
 import { svgGroup } from "./shapes";
 import Form from "../components/home-form";
+
 const page = () => {
   return (
     <>

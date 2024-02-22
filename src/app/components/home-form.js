@@ -3,6 +3,7 @@ import React from "react";
 import { Input } from "@nextui-org/react";
 import { useForm } from "./useForm";
 import "./home-contact.scss";
+import HomeRespuesta from "./home-respuesta";
 
 const Form = ({ colorFuente, colorBorde }) => {
   //-----FORMULARIO INICIAL-----//
@@ -41,7 +42,7 @@ const Form = ({ colorFuente, colorBorde }) => {
     useForm(initialForm, validationsForm);
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
           <Input
@@ -134,6 +135,7 @@ const Form = ({ colorFuente, colorBorde }) => {
           Enviar
         </button>
       </form>
+      {response && <HomeRespuesta />}
     </div>
   );
 };
