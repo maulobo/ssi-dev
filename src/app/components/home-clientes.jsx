@@ -181,10 +181,6 @@ const Clientes = () => {
           </section>
           <div></div>
           <section>
-            <p className="text-ape">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem voluptas at dolorum tempore pariatur amet fugit!
-            </p>
              <p className="text-ape">email: logistica@ssisrl.com.ar, administracion@ssisrl.com.ar  </p>
              <p className="text-ape">telefono: 2994870406, 2994873722  </p>
           </section>
