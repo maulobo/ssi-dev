@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppIcon = () => {
   const openWhatsApp = () => {
-    window.open("https://wa.me/2995831639");
+    window.open("https://wa.me/2994106234");
   };
 
   return (
