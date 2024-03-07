@@ -180,8 +180,8 @@ const Clientes = () => {
             <h2>{contador}</h2>
           </section>
           <div></div>
-          <section>
-             <p className="text-ape">email: logistica@ssisrl.com.ar, administracion@ssisrl.com.ar  </p>
+          <section className" ">
+             <p className="text-ape">Email: logistica@ssisrl.com.ar, administracion@ssisrl.com.ar  </p>
              <p className="text-ape">telefono: 2994870406, 2994873722  </p>
           </section>
         </div>
