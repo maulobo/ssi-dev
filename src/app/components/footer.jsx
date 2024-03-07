@@ -11,10 +11,11 @@ const Footer = () => {
         <div className="footer-div">
           <div className="footer-div-box">
             <h2>Contacto</h2>
-            <p className="p-footer">mail: ssi.web.nqn@gmail.com </p>
-            <p className="p-footer">telefono: </p>
-            <p className="p-footer">direccion: </p>
-            <p className="p-footer">mail: </p>
+            <p className="p-footer">email: logistica@ssisrl.com.ar </p>
+            <p className="p-footer">email: administracion@ssisrl.com.ar </p>
+            <p className="p-footer">telefono: 2994870406 </p>
+            <p className="p-footer">telefono: 2994873722 </p>
+       
           </div>
           <div className="footer-div-box">
             <h2>Redes</h2>
