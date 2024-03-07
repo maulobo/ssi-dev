@@ -181,8 +181,7 @@ const Clientes = () => {
           </section>
           <div></div>
           <section className" ">
-             <p className="text-ape">Email: logistica@ssisrl.com.ar, administracion@ssisrl.com.ar  </p>
-             <p className="text-ape">telefono: 2994870406, 2994873722  </p>
+
           </section>
         </div>
         <div className="box box-title">
