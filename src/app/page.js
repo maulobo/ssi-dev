@@ -31,7 +31,8 @@ export default function Home() {
   return (
     <Wraper>
       {loading ? (
-        <Loader timeline={timeline} />
+     <Loader timeline={timeline} />
+    
       ) : (
         <div style={{ overflow: "hidden" }}>
           <HomeHero />

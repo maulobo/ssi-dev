@@ -1,7 +1,7 @@
 import React from "react";
 import "./home-hero.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
-import mygif from "public/images/gif/mygif.gif";
+import mygif from "/public/images/gif/mygif.gif";
 import Image from "next/image";
 
 const HomeHero = () => {

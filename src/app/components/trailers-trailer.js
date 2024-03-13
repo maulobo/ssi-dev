@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import Scene from "./scene";
 import "./trailers-trailer.scss";
-import Image from "next/image";
-import interiorok from "public/images/interiorok.jpg";
 
 const TrailersTrailer = () => {
   const [active, setActive] = useState(false);
