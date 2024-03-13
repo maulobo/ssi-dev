@@ -180,8 +180,7 @@ const Clientes = () => {
             <h2>{contador}</h2>
           </section>
           <div></div>
-          <section className" ">
-
+          <section>
           </section>
         </div>
         <div className="box box-title">
