@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
           `}
         </Script>
+        <meta name="google-site-verification" content="TuCódigoDeVerificaciónAquí" />
       </head>
       <body>
         <Menu />
