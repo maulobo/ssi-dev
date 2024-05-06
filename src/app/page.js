@@ -14,7 +14,7 @@ import WhatsAppIcon from "./components/Whats";
 import Wraper from "./components/lenis";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [timeline, setTimeline] = useState(null);
 
   useLayoutEffect(() => {
@@ -31,10 +31,15 @@ export default function Home() {
   return (
     <Wraper>
       {loading ? (
-     <Loader timeline={timeline} />
-    
+        <Loader timeline={timeline} />
       ) : (
         <div style={{ overflow: "hidden" }}>
+          <h1 style={{ visibility: " hidden" }}>Soto Servicios Industriales</h1>
+          <p style={{ visibility: " hidden" }}>
+            Somos una compañía de servicios dirigidos a satisfacer las
+            necesidades de la actividad industrial y de empresas e instituciones
+            de gran volumen en la región Patagónica.
+          </p>
           <HomeHero />
           <Letters />
           <Empresa />
