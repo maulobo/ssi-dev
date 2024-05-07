@@ -1,3 +1,4 @@
+import { LinkIcon } from "@nextui-org/react";
 import Menu from "./components/menu";
 import "./globals.scss";
 import { Inter } from "next/font/google";
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="_Y6_3j9GnIFgxhcEC4oKpEVtQONgPZ_2LS3TPoDF_HQ"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
         <Menu />
