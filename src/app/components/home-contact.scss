@@ -63,8 +63,8 @@
     flex: 1;
     max-height: 150px;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20%;
+    justify-content: center;
+
     gap: 3em;
     > img {
       max-height: 50px;
@@ -72,6 +72,9 @@
       object-fit: contain;
     }
   }
+}
+.text-contact-box {
+  font-size: 1.5rem;
 }
 @media screen and (max-width: 664px) {
   .contact-box1 {

@@ -5,6 +5,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import Form from "./home-form";
 import { IconContext } from "react-icons";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Contact = forwardRef((props, ref) => {
   return (
@@ -26,11 +27,22 @@ const Contact = forwardRef((props, ref) => {
         </div>
       </div>
       <div className="contact-box">
+        <div>
+          <h3 className="text-contact-box">
+            Podes contactarte directamente a <b>ssi@ssisrl.com.ar</b>
+          </h3>
+        </div>
         <div className="contact-box3">
-          <IconContext.Provider value={{ size: "9vw" }}>
-            <BsFacebook />
-            <AiFillInstagram />
-            <RiTwitterXFill />
+          <IconContext.Provider value={{ size: "4rem" }}>
+            <a href="https://www.facebook.com/profile.php?id=61558974149296">
+              <BsFacebook />
+            </a>
+            <a href="https://www.instagram.com/soto.servicios.industriales/">
+              <AiFillInstagram />
+            </a>
+            <a href="https://www.linkedin.com/company/soto-servicios-industriales-srl/">
+              <FaLinkedinIn />
+            </a>
           </IconContext.Provider>
         </div>
       </div>
