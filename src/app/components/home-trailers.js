@@ -25,10 +25,6 @@ const HomeTrailers = () => {
             <Link href={"/trailers"} className="buton-modulo visualizacion">
               VER MAS
             </Link>
-            <section className="trailers-section-svg">
-              <Image src={trailer1} alt="trailer1" />
-              <Image src={trailer2} alt="trailer2" />
-            </section>
           </section>
         </div>
         <div className="mitad-der-home-modulo">

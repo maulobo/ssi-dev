@@ -23,9 +23,6 @@ const HomeTransporte = () => {
             <button className="buton-lateral-base visualizacion-base">
               VER MAS
             </button>
-            <section className="transporte-section-svg">
-              <Image src={base} alt="base" className="" />
-            </section>
           </section>
         </div>
         <div className="mitad-der-home-base">
