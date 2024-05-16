@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import AccordionTrailer from "./trailers-accordion";
 import "./trailers-black.scss";

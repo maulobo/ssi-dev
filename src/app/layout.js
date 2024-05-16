@@ -1,10 +1,7 @@
-import { LinkIcon } from "@nextui-org/react";
 import Menu from "./components/menu";
 import "./globals.scss";
-import { Inter } from "next/font/google";
-import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+import Script from "next/script";
 
 export const metadata = {
   title: "Soto Servicios Industriales",
@@ -16,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="description"
           content="Somos una compañía de servicios dirigidos a satisfacer las necesidades de la actividad industrial y de empresas e instituciones de gran volumen en la región Patagónica."
