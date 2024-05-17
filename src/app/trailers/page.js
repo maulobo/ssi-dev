@@ -32,7 +32,7 @@ const Page = () => {
         </section>
         <Appears phrase={phrase2} />
         <TrailerBlack />
-        <TrailersTrailer />
+        {/* <TrailersTrailer /> */}
         <Footer />
       </main>
     </>
