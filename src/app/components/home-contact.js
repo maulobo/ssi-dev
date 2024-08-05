@@ -31,6 +31,9 @@ const Contact = forwardRef((props, ref) => {
           <h3 className="text-contact-box">
             Podes contactarte directamente a <b>ssi@ssisrl.com.ar</b>
           </h3>
+                                     <h3 className="text-contact-box">
+           Tel: 2996286151</b>
+          </h3>
         </div>
         <div className="contact-box3">
           <IconContext.Provider value={{ size: "4rem" }}>
