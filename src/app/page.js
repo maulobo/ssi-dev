@@ -1,3 +1,4 @@
+
 "use client";
 import { useLayoutEffect, useState } from "react";
 import Empresa from "./components/home-empresa";
@@ -54,7 +55,7 @@ export default function Home() {
             "email": "logistica@ssisrl.com.ar",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": ",
+              "streetAddress": "",
               "addressLocality": "Neuquen",
               "addressRegion": "Neuquen",
               "postalCode": "8300",
@@ -85,8 +86,6 @@ export default function Home() {
                   "image": "",
                   "url": "https://sotosisrl.com/catering"
                 }
-              },
-         
               },
               {
                 "@type": "Offer",
