@@ -107,12 +107,6 @@ const TrailersModern = () => {
 
   return (
     <div className={styles.trailersContainer}>
-      {/* Navigation Link */}
-      <Link href="/" className={styles.homeLink}>
-        <FaHome />
-        <span>IR AL INICIO</span>
-      </Link>
-
       {/* Hero Section */}
       <section ref={heroRef} className={styles.hero}>
         <motion.div className={styles.heroVideo} style={{ y }}>

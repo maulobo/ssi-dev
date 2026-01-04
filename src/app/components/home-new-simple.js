@@ -9,6 +9,8 @@ import neuquenMapa from "/public/images/pngNeuquen.png";
 const HomeNewSimple = () => {
   const heroRef = useRef(null);
   const titleRef = useRef(null);
+  const companyRef = useRef(null);
+  const mapRef = useRef(null);
 
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -26,25 +28,25 @@ const HomeNewSimple = () => {
 
   const services = [
     {
+      id: "01",
       title: "CATERING",
       description:
         "Servicios integrales de alimentación para campamentos petroleros",
-      icon: "🍽️",
     },
     {
+      id: "02",
       title: "TRANSPORTE",
       description: "Logística especializada para personal y equipos",
-      icon: "🚛",
     },
     {
+      id: "03",
       title: "MÓDULOS",
       description: "Trailers equipados para alojamiento en sitios remotos",
-      icon: "🏠",
     },
     {
+      id: "04",
       title: "PERIFERICOS",
-      description: "alquiler de sisternas, generadores y luminarias",
-      icon: "⚙️",
+      description: "Alquiler de cisternas, generadores y luminarias",
     },
   ];
 
@@ -79,6 +81,20 @@ const HomeNewSimple = () => {
         },
       }
     );
+
+    // Parallax para el mapa
+    if (mapRef.current) {
+      gsap.to(mapRef.current, {
+        y: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: companyRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    }
   }, []);
 
   return (
@@ -147,42 +163,41 @@ const HomeNewSimple = () => {
                   styles[`card${index + 1}`]
                 }`}
               >
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardIcon}>
-                    <div className={styles.iconWrapper}>{service.icon}</div>
-                  </div>
-                </div>
-
+                <div className={styles.cardBackgroundNumber}>{service.id}</div>
                 <div className={styles.cardContent}>
+                  <div className={styles.cardHeader}>
+                    <span className={styles.cardNumber}>{service.id}</span>
+                    <div className={styles.cardLine}></div>
+                  </div>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
 
                   <div className={styles.cardFeatures}>
                     {index === 0 && (
                       <>
-                        <span>• Menús nutritivos balanceados</span>
-                        <span>• Cocina móvil especializada</span>
-                        <span>• Personal capacitado</span>
+                        <span>Menús nutritivos balanceados</span>
+                        <span>Cocina móvil especializada</span>
+                        <span>Personal capacitado</span>
                       </>
                     )}
                     {index === 1 && (
                       <>
-                        <span>• Flota especializada</span>
-                        <span>• Conductores certificados</span>
+                        <span>Flota especializada</span>
+                        <span>Conductores certificados</span>
                       </>
                     )}
                     {index === 2 && (
                       <>
-                        <span>• Equipamiento completo</span>
-                        <span>• Instalación rápida</span>
-                        <span>• Mantenimiento incluido</span>
+                        <span>Equipamiento completo</span>
+                        <span>Instalación rápida</span>
+                        <span>Mantenimiento incluido</span>
                       </>
                     )}
                     {index === 3 && (
                       <>
-                        <span>• Equipos certificados</span>
-                        <span>• Venta y alquiler</span>
-                        <span>• Soporte técnico</span>
+                        <span>Equipos certificados</span>
+                        <span>Venta y alquiler</span>
+                        <span>Soporte técnico</span>
                       </>
                     )}
                   </div>
@@ -201,7 +216,7 @@ const HomeNewSimple = () => {
       </section>
 
       {/* Company Section */}
-      <section className={styles.companySection}>
+      <section ref={companyRef} className={styles.companySection}>
         <div className={styles.container}>
           <div className={styles.companyGrid}>
             <div className={styles.companyContent}>
@@ -228,7 +243,7 @@ const HomeNewSimple = () => {
               </div>
             </div>
 
-            <div className={styles.companyVisual}>
+            <div ref={mapRef} className={styles.companyVisual}>
               <Image
                 src={neuquenMapa}
                 alt="Mapa de Neuquén"
@@ -249,18 +264,20 @@ const HomeNewSimple = () => {
             <h2>Confianza construida con líderes de la industria</h2>
           </div>
 
-          <div className={styles.clientsGrid}>
-            {clients.map((client, index) => (
-              <div key={index} className={styles.clientLogo}>
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={120}
-                  height={60}
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-            ))}
+          <div className={styles.clientsContainer}>
+            <div className={styles.clientsTrack}>
+              {[...clients, ...clients, ...clients].map((client, index) => (
+                <div key={index} className={styles.clientLogo}>
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
