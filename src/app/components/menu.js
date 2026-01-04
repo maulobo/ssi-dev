@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import "./menu-estilos.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const rutas = [
@@ -66,10 +67,16 @@ const Menu = () => {
           {/* Logo */}
           <div className="navbar-logo">
             <Link href="/" onClick={handleCambio}>
-              <span className="logo-text">
-                <span className="logo-main">SOTO</span>
-                <span className="logo-sub">SERVICIOS INDUSTRIALES</span>
-              </span>
+              <div className="logo-image-container">
+                <Image
+                  src="/images/logos/ssi-logo.png"
+                  alt="SOTO Servicios Industriales"
+                  width={180}
+                  height={60}
+                  className="logo-img"
+                  priority
+                />
+              </div>
             </Link>
           </div>
 

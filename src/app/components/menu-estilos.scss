@@ -42,27 +42,20 @@
 
 // Logo Styles
 .navbar-logo {
-  .logo-text {
-    text-decoration: none;
-    color: $colorBlanco;
+  .logo-image-container {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    line-height: 1;
+    align-items: center;
+    
+    .logo-img {
+      width: auto;
+      height: 45px;
+      object-fit: contain;
+      transition: all 0.3s ease;
 
-    .logo-main {
-      font-family: $fuenteTitulos;
-      font-weight: $titulosWeightt;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      letter-spacing: 0.1em;
-    }
-
-    .logo-sub {
-      font-family: $fuenteMenuTipo;
-      font-weight: 300;
-      font-size: clamp(0.6rem, 1.5vw, 0.8rem);
-      letter-spacing: 0.2em;
-      color: $colorMarfil;
-      margin-top: -0.2rem;
+      @media (max-width: 768px) {
+        height: 35px;
+      }
     }
   }
 }
