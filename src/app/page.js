@@ -1,29 +1,28 @@
 "use client";
-import { useLayoutEffect, useState } from "react";
-import Loader from "./components/Loader/Loader";
+import { useState, useEffect } from "react";
+import CustomLoader from "./components/CustomLoader";
 import gsap from "gsap";
 import HomeNewSimple from "./components/home-new-simple";
 import WhatsAppIcon from "./components/Whats";
 
+// Variable global que se resetea con cada carga de página
+let hasShownLoader = false;
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
-  const [timeline, setTimeline] = useState(null);
 
-  useLayoutEffect(() => {
-    const context = gsap.context(() => {
-      const tl = gsap.timeline({
-        onComplete: () => setLoading(false),
-      });
-      setTimeline(tl);
-    });
-
-    return () => context.revert();
+  useEffect(() => {
+    // Si no se ha mostrado el loader en esta carga de página, mostrarlo
+    if (!hasShownLoader) {
+      setLoading(true);
+      hasShownLoader = true;
+    }
   }, []);
 
   return (
     <>
       {loading ? (
-        <Loader timeline={timeline} />
+        <CustomLoader onComplete={() => setLoading(false)} />
       ) : (
         <div>
           {/* SEO Hidden Content */}

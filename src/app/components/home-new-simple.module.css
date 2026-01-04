@@ -167,7 +167,8 @@
 .heroScroll {
   position: absolute;
   bottom: 3rem;
-  left: 4rem;
+  right: 4rem;
+  left: auto;
 }
 
 .scrollIndicator {
@@ -786,6 +787,10 @@
   opacity: 1;
 }
 
+.techintLogo img {
+  transform: scale(0.8);
+}
+
 /* Contact Section */
 .contactSection {
   padding: 8rem 0;
@@ -924,6 +929,16 @@
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
+  }
+
+  .heroScroll {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .titleMain {
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
 
   .servicesSection,

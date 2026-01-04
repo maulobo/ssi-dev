@@ -25,17 +25,14 @@ const ContactSectionNew = () => {
 
   const contactInfo = [
     {
-      icon: "📍",
       title: "UBICACIÓN",
       content: "Neuquén, Argentina",
     },
     {
-      icon: "📞",
       title: "TELÉFONO",
       content: "+54 299 XXX-XXXX",
     },
     {
-      icon: "✉️",
       title: "EMAIL",
       content: "info@sotoservicios.com",
     },

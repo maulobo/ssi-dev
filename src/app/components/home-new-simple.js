@@ -118,7 +118,8 @@ const HomeNewSimple = () => {
             <div ref={titleRef} className={styles.heroTitle}>
               <h1>
                 <span className={styles.titleMain}>SOTO</span>
-                <span className={styles.titleMain}>SERVICIOS INDUSTRIALES</span>
+                <span className={styles.titleMain}>SERVICIOS</span>
+                <span className={styles.titleMain}>INDUSTRIALES</span>
               </h1>
             </div>
 
@@ -267,7 +268,12 @@ const HomeNewSimple = () => {
           <div className={styles.clientsContainer}>
             <div className={styles.clientsTrack}>
               {[...clients, ...clients, ...clients].map((client, index) => (
-                <div key={index} className={styles.clientLogo}>
+                <div
+                  key={index}
+                  className={`${styles.clientLogo} ${
+                    client.name === "Techint" ? styles.techintLogo : ""
+                  }`}
+                >
                   <Image
                     src={client.logo}
                     alt={client.name}
@@ -295,14 +301,12 @@ const HomeNewSimple = () => {
 
               <div className={styles.contactDetails}>
                 <div className={styles.contactItem}>
-                  <span className={styles.contactIcon}>📍</span>
                   <div>
                     <h4>Ubicación</h4>
                     <p>Neuquén, Argentina</p>
                   </div>
                 </div>
                 <div className={styles.contactItem}>
-                  <span className={styles.contactIcon}>📞</span>
                   <div>
                     <h4>Teléfono</h4>
                     <p>+54 299 XXX-XXXX</p>

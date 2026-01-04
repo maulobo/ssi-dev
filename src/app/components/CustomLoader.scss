@@ -1,0 +1,84 @@
+$colorNegro: #1c1f24;
+$colorRojo: #dc2626;
+$colorBlanco: #ffffff;
+
+.custom-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $colorNegro;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: $colorBlanco;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    span {
+      display: inline-block;
+    }
+
+    span:first-child {
+      color: $colorRojo;
+    }
+  }
+
+  &__separator {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, $colorRojo 0%, $colorBlanco 100%);
+    transform-origin: left;
+  }
+
+  &__progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 300px;
+
+    @media (max-width: 768px) {
+      width: 240px;
+    }
+  }
+
+  &__progress-bar {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, $colorRojo 0%, #ef4444 100%);
+    border-radius: 10px;
+    transition: width 0.1s ease-out;
+  }
+
+  &__progress-number {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.05em;
+  }
+}
