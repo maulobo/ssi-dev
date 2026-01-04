@@ -13,6 +13,32 @@ $fuenteSubtitulos: 7vw;
 $fuenteSubtitulosMayus: 6vw;
 $fuenteSubtMayusRESIZE: 3.5em;
 
+:root {
+  --font-secondary: "Avenir", sans-serif;
+  --color-primary: #e7324b;
+  --color-secondary: #ff6b7d;
+  --color-dark: #1c1f24;
+  --color-white: #ffffff;
+  --color-light: #cdcccc;
+  --font-primary: "Neue Haas Grotesk Display Pro", sans-serif;
+  --font-secondary: "Avenir", sans-serif;
+  --primary-orange: #ff6b35;
+  --primary-blue: #004aad;
+  --dark-blue: #003380;
+  --light-gray: #f8f9fa;
+  --white: #ffffff;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --gradient-main: linear-gradient(
+    135deg,
+    var(--primary-orange) 0%,
+    var(--primary-blue) 100%
+  );
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
 //$contactoFuente:  // SOLO para la parte de contacto FALTA VER
 $fuenteTexto: clamp(
   1em,
@@ -34,7 +60,7 @@ $fuenteMenuTipo: "Avenir", sans-serif;
 
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
 $fuenteTitulos: "Neue Haas Grotesk Display Pro", sans-serif;
-$titulosWeightt: 900;
+$titulosWeightt: 600;
 
 $mayuscula: uppercase; // para todos los titulos y sub titulos
 

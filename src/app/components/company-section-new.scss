@@ -1,0 +1,311 @@
+// Importar variables
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
+
+.company-section-new {
+  position: relative;
+  padding: 8rem 0;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.company-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.company-content {
+  .company-header {
+    margin-bottom: 2rem;
+
+    .company-subtitle {
+      font-family: "Avenir", sans-serif;
+      font-size: 0.9rem;
+      color: #ff6b35;
+      letter-spacing: 3px;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.2;
+      color: #0a0a0a;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  .company-description {
+    margin-bottom: 3rem;
+
+    p {
+      font-family: "Avenir", sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4a4a4a;
+      font-weight: 300;
+    }
+  }
+
+  .company-values {
+    h3 {
+      font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #0a0a0a;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .values-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .value-item {
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid #ff6b35;
+
+      &:hover {
+        transform: translateX(10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h4 {
+        font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #0a0a0a;
+        margin: 0 0 0.5rem 0;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-family: "Avenir", sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #666;
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.company-visual {
+  .map-container {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+    .map-image {
+      filter: brightness(0.8) contrast(1.2);
+      opacity: 0.7;
+    }
+
+    .map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 107, 53, 0.2) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .location-pin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+
+      .pin-dot {
+        width: 20px;
+        height: 20px;
+        background: #ff6b35;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        position: relative;
+        animation: pulse 2s infinite;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 40px;
+          height: 40px;
+          border: 2px solid #ff6b35;
+          border-radius: 50%;
+          animation: ripple 2s infinite;
+        }
+      }
+
+      span {
+        font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.company-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+
+  .stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-number {
+      font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: #ff6b35;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: "Avenir", sans-serif;
+      font-size: 0.9rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+  }
+}
+
+.company-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  .bg-geometric {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 107, 53, 0.03) 0%,
+      rgba(247, 147, 30, 0.05) 100%
+    );
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .company-section-new {
+    padding: 4rem 0;
+  }
+
+  .company-container {
+    padding: 0 1rem;
+  }
+
+  .company-grid {
+    margin-bottom: 4rem;
+  }
+
+  .company-visual .map-container {
+    height: 300px;
+  }
+
+  .company-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .stat-item {
+      padding: 1.5rem 1rem;
+
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .company-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+}

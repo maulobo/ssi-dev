@@ -1,0 +1,116 @@
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: var(--color-dark);
+}
+
+.heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+}
+
+.heroVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.1);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(28, 31, 36, 0.8) 0%,
+    rgba(28, 31, 36, 0.3) 40%,
+    rgba(231, 50, 75, 0.1) 70%,
+    rgba(28, 31, 36, 0.9) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heroText {
+  max-width: 900px;
+}
+
+.heroLabel {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.heroLabel span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.heroLine {
+  width: 50px;
+  height: 4px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.titleMain {
+  display: block;
+  font-size: clamp(2rem, 7vw, 7rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--color-primary);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: var(--color-light);
+  max-width: 800px;
+}

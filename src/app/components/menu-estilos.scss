@@ -1,118 +1,351 @@
 @import "../globals.scss";
-.cont-main {
+
+// Modern Navbar Styles
+.modern-navbar {
   position: fixed;
-  z-index: 11;
   top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+  background: rgba(28, 31, 36, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.scrolled {
+    background: rgba(28, 31, 36, 0.95);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 0.75rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  &.menu-open {
+    background: transparent;
+  }
 }
 
-.cont-menu {
-  position: absolute;
-  color: #fff;
-  height: 0vh;
-  background-color: transparent;
-  opacity: 0;
-  top: -100vh;
-  width: 100%;
-  border-radius: 100%;
-  @include divGenerico;
-  transition: all 1s ease;
-  .list {
-    list-style-type: none;
-    width: 70%;
-    .list-cont {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 2rem 0 2rem 0;
-      li > a {
-        font-size: $fontTamnio !important;
-        text-decoration: none;
-        color: #fff;
-        cursor: pointer;
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+// Logo Styles
+.navbar-logo {
+  .logo-text {
+    text-decoration: none;
+    color: $colorBlanco;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+    .logo-main {
+      font-family: $fuenteTitulos;
+      font-weight: $titulosWeightt;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: 0.1em;
+    }
+
+    .logo-sub {
+      font-family: $fuenteMenuTipo;
+      font-weight: 300;
+      font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+      letter-spacing: 0.2em;
+      color: $colorMarfil;
+      margin-top: -0.2rem;
+    }
+  }
+}
+
+// Desktop Menu
+.desktop-menu {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navbar-link {
+  position: relative;
+  text-decoration: none;
+  color: $colorBlanco;
+  font-family: $fuenteMenuTipo;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $colorRojo, #ff6b7d);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: $colorRojo;
+    transform: translateY(-2px);
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    color: $colorRojo;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+// Mobile Menu Toggle
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.hamburger {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $colorBlanco;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      top: 20px;
+    }
+  }
+
+  &.open {
+    span {
+      background: $colorBlanco;
+
+      &:nth-child(1) {
+        top: 10px;
+        transform: rotate(135deg);
       }
-      .icono {
-        transform: rotate(45deg);
-        font-size: $fontTamnio;
-        transition: 500ms ease;
-        &:hover {
-          transform: rotate(90deg);
-        }
+
+      &:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+
+      &:nth-child(3) {
+        top: 10px;
+        transform: rotate(-135deg);
       }
     }
   }
 }
-.activo {
-  z-index: -1;
+
+// Mobile Menu Overlay
+.mobile-menu-overlay {
+  position: fixed;
   top: 0;
-  border-radius: 0;
-  opacity: 1;
-  height: 100vh;
+  left: 0;
   width: 100%;
-  background-color: $colorNegro;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(28, 31, 36, 0.98),
+    rgba(28, 31, 36, 0.95)
+  );
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 }
 
-.nav {
-  position: relative;
+.mobile-menu-content {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   width: 100%;
+  max-width: 400px;
 }
-.menu-fondo {
-  padding: 1rem;
-}
-.icon {
-  margin: 20px;
-}
-.nav-icon-5 {
-  width: 35px;
-  height: 30px;
-  margin: 10px 10px;
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-}
-.nav-icon-5 span {
-  background-color: $colorRojo;
-  position: absolute;
-  border-radius: 2px;
-  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  width: 100%;
-  height: 4px;
-  transition-duration: 500ms;
-}
-.nav-icon-5 span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-}
-.nav-icon-5 span:nth-child(2) {
-  top: 13px;
-  left: 0px;
-  opacity: 1;
-}
-.nav-icon-5 span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-}
-.nav-icon-5:not(.open):hover span:nth-child(1) {
-  transform: rotate(-3deg) scaleY(1.1);
-}
-.nav-icon-5:not(.open):hover span:nth-child(2) {
-  transform: rotate(3deg) scaleY(1.1);
-}
-.nav-icon-5:not(.open):hover span:nth-child(3) {
-  transform: rotate(-4deg) scaleY(1.1);
-}
-.nav-icon-5.open span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 13px;
-}
-.nav-icon-5.open span:nth-child(2) {
+
+.mobile-menu-item {
+  margin: 2rem 0;
   opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.6s ease forwards;
+
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+  }
 }
-.nav-icon-5.open span:nth-child(3) {
+
+.mobile-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $colorBlanco;
+  font-family: $fuenteTitulos;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  letter-spacing: 0.05em;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(231, 50, 75, 0.1),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    color: $colorRojo;
+    transform: translateX(10px);
+
+    &::before {
+      left: 100%;
+    }
+
+    .menu-arrow {
+      transform: translateX(10px) rotate(0deg);
+      color: $colorRojo;
+    }
+  }
+
+  &.active {
+    color: $colorRojo;
+
+    .menu-number {
+      color: $colorRojo;
+    }
+  }
+}
+
+.menu-number {
+  font-family: $fuenteMenuTipo;
+  font-weight: 300;
+  font-size: 1rem;
+  color: $colorMarfil;
+  min-width: 40px;
+  transition: color 0.3s ease;
+}
+
+.menu-text {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.menu-arrow {
+  font-size: 1.2rem;
+  color: $colorMarfil;
   transform: rotate(-45deg);
-  top: 13px;
+  transition: all 0.3s ease;
+}
+
+// Animations
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .mobile-menu-link {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    padding: 1rem 0;
+  }
+
+  .menu-text {
+    margin-left: 1rem;
+  }
 }

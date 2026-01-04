@@ -1,0 +1,427 @@
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
+
+.hero-new {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0a;
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.2);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  mix-blend-mode: multiply;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #cccccc 50%,
+        #ffffff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+
+      &:nth-child(1) {
+        font-size: 1.2em;
+        margin-bottom: -0.1em;
+      }
+
+      &:nth-child(2) {
+        font-size: 1em;
+        margin-bottom: -0.1em;
+        background: linear-gradient(
+          135deg,
+          #ff6b35 0%,
+          #f7931e 50%,
+          #ffd700 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &:nth-child(3) {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+.hero-subtitle {
+  margin-bottom: 4rem;
+
+  p {
+    font-family: "Avenir", sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    line-height: 1.4;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.7;
+
+  .scroll-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #ff6b35);
+    margin-bottom: 1rem;
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  span {
+    font-family: "Avenir", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  z-index: 20;
+  transform-origin: left;
+}
+
+.hero-details {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 15;
+  display: flex;
+  justify-content: space-between;
+
+  .hero-location,
+  .hero-year {
+    font-family: "Avenir", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-title h1 span {
+    &:nth-child(1) {
+      font-size: 1.1em;
+    }
+
+    &:nth-child(2) {
+      font-size: 0.95em;
+    }
+
+    &:nth-child(3) {
+      font-size: 0.85em;
+    }
+  }
+
+  .hero-subtitle {
+    margin-bottom: 3rem;
+  }
+
+  .hero-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 6rem;
+  }
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.2);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  mix-blend-mode: multiply;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #cccccc 50%,
+        #ffffff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+
+      &:nth-child(1) {
+        font-size: 1.2em;
+        margin-bottom: -0.1em;
+      }
+
+      &:nth-child(2) {
+        font-size: 1em;
+        margin-bottom: -0.1em;
+        background: linear-gradient(
+          135deg,
+          #ff6b35 0%,
+          #f7931e 50%,
+          #ffd700 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &:nth-child(3) {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+.hero-subtitle {
+  margin-bottom: 4rem;
+
+  p {
+    font-family: "Avenir", sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    line-height: 1.4;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.7;
+
+  .scroll-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #ff6b35);
+    margin-bottom: 1rem;
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  span {
+    font-family: "Avenir", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  z-index: 20;
+  transform-origin: left;
+}
+
+.hero-details {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 15;
+  display: flex;
+  justify-content: space-between;
+
+  .hero-location,
+  .hero-year {
+    font-family: "Avenir", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-title h1 span {
+    &:nth-child(1) {
+      font-size: 1.1em;
+    }
+
+    &:nth-child(2) {
+      font-size: 0.95em;
+    }
+
+    &:nth-child(3) {
+      font-size: 0.85em;
+    }
+  }
+
+  .hero-subtitle {
+    margin-bottom: 3rem;
+  }
+
+  .hero-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 6rem;
+  }
+}
