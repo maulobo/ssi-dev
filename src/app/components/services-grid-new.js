@@ -75,6 +75,7 @@ const ServicesGridNew = () => {
   });
 
   let y = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
+  let yOdd = useTransform(scrollYProgress, [0, 1], ["-50px", "50px"]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -143,10 +144,7 @@ const ServicesGridNew = () => {
               onMouseEnter={() => setHoveredService(service.id)}
               onMouseLeave={() => setHoveredService(null)}
               style={{
-                y:
-                  index % 2 === 0
-                    ? y
-                    : useTransform(scrollYProgress, [0, 1], ["-50px", "50px"]),
+                y: index % 2 === 0 ? y : yOdd,
               }}
             >
               <div className="service-image">

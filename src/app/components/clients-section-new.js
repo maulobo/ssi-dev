@@ -115,10 +115,10 @@ const ClientsSectionNew = () => {
         <div className="clients-testimonial">
           <div className="testimonial-content">
             <blockquote>
-              "La confiabilidad y profesionalismo de Soto Servicios Industriales
+              &quot;La confiabilidad y profesionalismo de Soto Servicios Industriales
               nos permite mantener nuestras operaciones sin interrupciones,
               cumpliendo siempre con los más altos estándares de calidad y
-              seguridad."
+              seguridad.&quot;
             </blockquote>
             <div className="testimonial-author">
               <strong>Cliente del sector petrolero</strong>
