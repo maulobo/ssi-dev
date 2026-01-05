@@ -15,12 +15,6 @@ const HeroTrailers = () => {
 
   return (
     <div className="cont-hero-trailer">
-      <Link className="cont-hero-class" href={"/"}>
-        <span>IR AL INICIO</span>
-        <span>
-          <FaHome />
-        </span>
-      </Link>
       <div className="trailer-hero-title">
         <h1>Trailers & módulos</h1>
         <h2>Una nueva forma</h2>

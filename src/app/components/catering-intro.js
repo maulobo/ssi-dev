@@ -13,19 +13,34 @@ const CateringIntro = () => {
       <section className="intro-frutas">
         <Image src={svg1} alt="unafrutita" />
         <Image src={svg6} alt="laranja" />
-        <Image src={svg2} alt="picante" />
+
         <Image src={svg3} alt="palta" />
       </section>
       <section className="intro-p">
         <div className="intro-box">
-          <h2>Nosotros</h2>
+          <h2>Nutrición Industrial</h2>
+          <div className="intro-highlight">
+            <span className="highlight-number">24/7</span>
+            <span className="highlight-text">Servicio continuo</span>
+          </div>
           <p>
-            Nos dedicamos a proporcionar soluciones gastronómicas de alta
-            calidad para satisfacer las necesidades culinarias más exigentes.
-            Desde viandas saludables y equilibradas hasta eventos de gran
-            envergadura con una atención meticulosa a cada detalle, nuestro
-            compromiso con la excelencia se refleja en cada plato que servimos.
+            Especializados en soluciones gastronómicas para la industria
+            petrolera y grandes operaciones. Nuestro servicio de catering está
+            diseñado para mantener a los equipos de trabajo bien alimentados con
+            comidas nutritivas, frescas y adaptadas a los horarios exigentes del
+            sector industrial.
           </p>
+          <div className="intro-features">
+            <div className="feature-item">
+              <p>Menús balanceados</p>
+            </div>
+            <div className="feature-item">
+              <p>Entrega in-situ</p>
+            </div>
+            <div className="feature-item">
+              <p>Operaciones 24hs</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

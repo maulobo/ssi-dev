@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import HeroCatering from "../components/catering-hero";
 import CateringIntro from "../components/catering-intro";
+import CateringServices from "../components/catering-services";
 import CateringCautiva from "../components/catering-cautiva";
-import Imagenn from "../components/catering-image";
 import CateringSvg from "../components/catering-svg";
 import Footer from "../components/footer";
 
@@ -11,9 +12,9 @@ const Page = () => {
     <div>
       <HeroCatering />
       <CateringIntro />
+      <CateringServices />
       <CateringCautiva />
       <CateringSvg />
-      <Imagenn />
       <Footer />
     </div>
   );

@@ -8,54 +8,86 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
 
-const svgs = [
+const galleryItems = [
   {
     id: 1,
     src: cate1,
-    alt: "cate1",
+    alt: "Servicio de catering industrial",
+    title: "Comedores Industriales",
+    description: "Espacios equipados para alimentar grandes equipos de trabajo",
   },
   {
     id: 2,
     src: cate2,
-    alt: "cate2",
+    alt: "Viandas y catering móvil",
+    title: "Catering Móvil",
+    description: "Soluciones gastronómicas que llegan hasta tu locación",
   },
   {
     id: 3,
     src: cate3,
-    alt: "cate3",
+    alt: "Eventos corporativos catering",
+    title: "Eventos Corporativos",
+    description: "Servicios especializados para reuniones y celebraciones",
   },
 ];
 
 const CateringSvg = () => {
-  const svgContainerRef = useRef(null);
-  const svgRef = useRef([]);
+  const galleryContainerRef = useRef(null);
+  const galleryRef = useRef([]);
   gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: svgContainerRef.current,
-        start: "center bottom-=200",
+        trigger: galleryContainerRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
       },
     });
-    svgRef.current.forEach((el, index) => {
-      tl.to(el, {
-        opacity: 1,
-        scale: 1,
-        delay: index * 0.1,
-      });
+
+    galleryRef.current.forEach((el, index) => {
+      if (el) {
+        tl.fromTo(
+          el,
+          {
+            opacity: 0,
+            scale: 0.8,
+            y: 50,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          },
+          index * 0.2
+        );
+      }
     });
   }, []);
 
   return (
-    <div ref={svgContainerRef} className="cateringsvg-container">
-      <div className="svg-boxes">
-        {svgs.map((svg, i) => (
+    <div ref={galleryContainerRef} className="catering-gallery-container">
+      <div className="gallery-header">
+        <p>Conocé nuestros servicios en acción</p>
+      </div>
+      <div className="gallery-grid">
+        {galleryItems.map((item, i) => (
           <div
-            ref={(el) => (svgRef.current[i] = el)}
-            key={svg.id}
-            className="svg-box"
+            ref={(el) => (galleryRef.current[i] = el)}
+            key={item.id}
+            className="gallery-item"
           >
-            <Image src={svg.src} alt={svg.alt} />
+            <div className="gallery-image">
+              <Image src={item.src} alt={item.alt} fill />
+              <div className="gallery-overlay">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

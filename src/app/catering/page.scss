@@ -1,31 +1,103 @@
 @import "../globals.scss";
-.catering-hero-title {
-  @include heroPages;
-}
-.hero-cont {
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
-}
-.video-back {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.cateringsvg-container {
-  background-color: $colorBlanco;
-  padding: 10% 8%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .svg-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2;
-    .svg-box {
-      opacity: 0;
-      scale: 0.1;
-      flex: 1;
+
+// Nueva galería moderna
+.catering-gallery-container {
+  background: linear-gradient(
+    180deg,
+    var(--light-gray) 0%,
+    var(--color-white) 100%
+  );
+  padding: 6% 8%;
+  margin-top: 0;
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-family: $fuenteTitulos;
+      font-size: $fuenteSubtitulosMayus;
+      color: var(--color-dark);
+      text-transform: $mayuscula;
+      margin-bottom: 1rem;
+      font-weight: $titulosWeightt;
+
+      @media (max-width: 768px) {
+        font-size: $fuenteSubtMayusRESIZE;
+      }
+    }
+
+    p {
+      font-family: var(--font-secondary);
+      font-size: $fuenteTexto;
+      color: var(--text-light);
+    }
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .gallery-item {
+    .gallery-image {
+      position: relative;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow-medium);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-heavy);
+
+        .gallery-overlay {
+          opacity: 1;
+        }
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        padding: 2rem 1.5rem 1.5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        h3 {
+          font-family: $fuenteTitulos;
+          color: var(--color-white);
+          font-size: 1.3rem;
+          margin-bottom: 0.5rem;
+          font-weight: $weightComun;
+          text-transform: $mayuscula;
+        }
+
+        p {
+          color: var(--color-light);
+          font-size: 0.9rem;
+          margin: 0;
+          line-height: 1.4;
+        }
+      }
     }
   }
 }
@@ -33,6 +105,14 @@
 @media (max-width: 600px) {
   .hero-cont {
     overflow: hidden;
-    height: 30vh;
+    height: 60vh;
+  }
+
+  .catering-gallery-container {
+    padding: 10% 5%;
+
+    .gallery-item .gallery-image {
+      height: 250px;
+    }
   }
 }

@@ -7,64 +7,68 @@ export const metadata = {
   title: "Soto Servicios Industriales",
   description:
     "Somos una compañía de servicios dirigidos a satisfacer las necesidades de la actividad industrial y de empresas e instituciones de gran volumen en la región Patagónica.",
-   scripts: [
+  scripts: [
     {
-      id: 'organization-schema', // Give it a unique ID
-      type: 'application/ld+json',
+      id: "organization-schema", // Give it a unique ID
+      type: "application/ld+json",
       dangerouslySetInnerHTML: {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Soto Servicios Industriales",
-          "url": "https://sotosisrl.com",
-          "logo": "https://sotosisrl.com/logo.png",
-          "description": "Especialistas en trailers armados, catering para empresas, equipamiento petrolero y módulos habitacionales.",
-          "telephone": "2994870406",
-          "email": "logistica@ssisrl.com.ar",
-          "address": {
+          name: "Soto Servicios Industriales",
+          url: "https://sotosisrl.com",
+          logo: "https://sotosisrl.com/logo.png",
+          description:
+            "Especialistas en trailers armados, catering para empresas, equipamiento petrolero y módulos habitacionales.",
+          telephone: "2994870406",
+          email: "logistica@ssisrl.com.ar",
+          address: {
             "@type": "PostalAddress",
-            "addressLocality": "Neuquén",
-            "addressRegion": "Neuquén",
-            "postalCode": "8300",
-            "addressCountry": "Argentina"
+            addressLocality: "Neuquén",
+            addressRegion: "Neuquén",
+            postalCode: "8300",
+            addressCountry: "Argentina",
           },
-          "sameAs": [
+          sameAs: [
             "https://www.facebook.com/sotoserviciosindustriales",
             "https://www.instagram.com/sotoserviciosindustriales",
-            "https://www.linkedin.com/company/sotosisrl"
+            "https://www.linkedin.com/company/sotosisrl",
           ],
-          "offers": [
+          offers: [
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Product",
-                "name": "Trailers Armados",
-                "description": "Trailers personalizados para diversos usos comerciales e industriales.",
-                "image": "https://sotosisrl.com/images/trailers.jpg",
-                "url": "https://sotosisrl.com/trailers"
-              }
+                name: "Trailers Armados",
+                description:
+                  "Trailers personalizados para diversos usos comerciales e industriales.",
+                image: "https://sotosisrl.com/images/trailers.jpg",
+                url: "https://sotosisrl.com/trailers",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Service",
-                "name": "Servicios de Catering",
-                "description": "Catering profesional para eventos corporativos y obras.",
-                "image": "https://sotosisrl.com/images/catering.jpg",
-                "url": "https://sotosisrl.com/catering"
-              }
+                name: "Servicios de Catering",
+                description:
+                  "Catering profesional para eventos corporativos y obras.",
+                image: "https://sotosisrl.com/images/catering.jpg",
+                url: "https://sotosisrl.com/catering",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Product",
-                "name": "Módulos Habitacionales",
-                "description": "Módulos habitacionales para proyectos industriales y campamentos.",
-                "image": "https://sotosisrl.com/images/modulos.jpg",
-                "url": "https://sotosisrl.com/trailers"
-              }
-            }
-          ]
+                name: "Módulos Habitacionales",
+                description:
+                  "Módulos habitacionales para proyectos industriales y campamentos.",
+                image: "https://sotosisrl.com/images/modulos.jpg",
+                url: "https://sotosisrl.com/trailers",
+              },
+            },
+          ],
         }),
       },
     },
@@ -100,7 +104,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>
+      <body style={{ backgroundColor: "#1c1f24", minHeight: "100vh" }}>
         <Menu />
         {children}
       </body>
