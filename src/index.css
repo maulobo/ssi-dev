@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@500;700;800&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-corporate-red: #e30613;
+  --color-corporate-dark: #3c3c3b;
+  --color-corporate-grey: #878787;
+  --color-surface: #f6f6f6;
+  --color-surface-white: #ffffff;
+
+  --font-display: "Manrope", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --spacing-section: 120px;
+  --spacing-section-sm: 80px;
+}
+
+@layer base {
+  /* Add base styles for smooth rendering */
+  body {
+    @apply bg-surface text-corporate-dark font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e30613;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold leading-tight;
+  }
+}
+
+/* Placeholder para contenedores 3D futuros */
+.canvas-container {
+  @apply w-full h-full relative z-0 pointer-events-none;
+}
+
+/* MapLibre popup reset */
+.neuquen-popup .maplibregl-popup-content {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+.neuquen-popup .maplibregl-popup-tip {
+  display: none;
+}
+
+/* Fade-in para el popup */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.15s ease-out forwards;
+}
